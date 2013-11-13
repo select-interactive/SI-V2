@@ -11,6 +11,11 @@
 	margin: 0 0 $padding;
 
 	@include box-shadow(0 1px 1px #999);
+
+	a {
+		border-bottom: 0;
+		padding-bottom: 0;
+	}
 }
 
 .news-img-primary {
