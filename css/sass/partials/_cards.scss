@@ -1,0 +1,74 @@
+﻿.card {
+	background: darken($body-background, 3%);
+	color: darken($body-color, 5%);
+	font-size: em(14px);
+	margin-bottom: $gutter-width;
+	text-shadow: 0 1px 0 #fff;
+
+	@include box-shadow(0 0 5px #999);
+
+	.lt-ie9 & {
+		border: 1px solid #ccc;
+	}
+}
+
+.card-copy {
+	$padding: 20px;
+	$neg-padding: 0 - $padding;
+
+	background: $white;
+	font-size: em(18px);
+	padding: $padding;
+
+	.headline {
+		@extend .av-medium;
+
+		background: $si-orange;
+		color: $white;
+		font-size: em(18px);
+		letter-spacing: 2px;
+		margin: $neg-padding $neg-padding $padding;
+		padding: $padding / 2 $padding; 
+		text-shadow: 1px 1px 0 #999;
+
+		@include mediaquery(large) {
+			font-size: em(20px);
+		}
+	}
+
+	.card-img {
+		margin: $neg-padding $neg-padding $padding;
+		@include box-shadow(0 1px 1px #999);
+	}
+
+	&.card-copy-base {
+		font-size: em(16px);
+
+		.headline {
+			font-size: em(22px);
+		}
+	}
+
+	.lt-ie9 & {
+		.card-img {
+			border-bottom: 1px solid #999;
+		}
+	}
+}
+
+.card-only {
+	margin-left: auto;
+	margin-right: auto;
+
+	@include mediaquery(large) {
+		width: 90%;
+	}
+
+	@include mediaquery(wide) {
+		width: 85%;
+	}
+
+	@include mediaquery(xwide) {
+		width: 70%;
+	}
+}

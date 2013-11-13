@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?><rss version="2.0"><channel><title>News from Select Interactive</title><link>http://select/news/</link><description>The latest news, projects, thoughts, ideas and announcements from Select Interactive.</description><ttl>5</ttl><item><title>SI Website v2.0 Is Live!</title><description>&lt;p&gt;It&amp;#39;s never easy finding/making time to work on your projects. We&amp;#39;ve spent some late nights coding hard&amp;nbsp;to get this project wrapped up and are thrilled with the results.&lt;/p&gt;
+
+&lt;h3 class="subtitle"&gt;When I began brainstorming design ideas I had a few goals in mind:&lt;/h3&gt;
+
+&lt;ul class="arrow"&gt;
+&lt;li&gt;Take advantage of the available screen space of&amp;nbsp;widescreen desktop monitors and laptops&lt;/li&gt;
+&lt;li&gt;Present our blogs/news entries in a more reader friendly format (make the font larger,&amp;nbsp;keep columns narrow to help the reader&amp;#39;s eye move between lines, add spacing between lines to keep clear separation).&lt;/li&gt;
+&lt;li&gt;Find a more interesting way to show recent news items and draw inspiration from current web trends. The &amp;quot;card&amp;quot; theme has become quite popular throughout the web. Think Pinterest and Google+.&lt;/li&gt;
+&lt;li&gt;Keep copy on the home page and portfolio page limited. I don&amp;#39;t want to overwhelm our visitors. They&amp;#39;ll click through to what they want to read.&lt;/li&gt;
+&lt;li&gt;Obviously needed a slick responsive design implementation.&lt;/li&gt;
+&lt;li&gt;While we currently pull up as the #1 result on Google when searching for &amp;quot;Fort Worth Web Development&amp;quot;, we can still work to improve our results with other queries. I wanted to rework our blog tagging system and URL structure to target more &amp;quot;web&amp;quot; keywords. Tags such as &amp;quot;&lt;a href="/news/tag/web-performance" target="_blank"&gt;Web Performance&lt;/a&gt;&amp;quot; and &amp;quot;&lt;a href="/news/tag/web-performance" target="_blank"&gt;Web Technology&lt;/a&gt;&amp;quot; now have their own URLs and page titles to (hopefully) improve this.&lt;/li&gt;
+&lt;li&gt;As a developer focused on performance, optimization was on my mind from the start. As we do with all projects now, we serve up .webp images to Google Chrome users. All other images have been optimized via the &lt;a href="https://npmjs.org/package/grunt-contrib-imagemin" target="_blank"&gt;grunt imagemin plugin&lt;/a&gt; and .jpg files are saved as progressive jpegs. For each news entry, we have 3 different header dimensions that are served based on the viewing device&amp;#39;s dimensions. This allows us to send smaller files to phones and tablets to speed up download times, rendering performance, and lower memory required.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It&amp;#39;s been our goal from day 1 to &amp;quot;Build a Better Web&amp;quot; by improving every project we work on, and I believe we&amp;#39;ve done that yet again with our new site.&lt;/p&gt;
+
+&lt;p&gt;Moving forward we look forward to future enhancements to the site and exciting times ahead as we inch closer to launching new sites for Williams Trew Sotheby&amp;rsquo;s International Realty and The Ridglea Theater Center.&lt;/p&gt;
+
+&lt;p style="display:none;"&gt;If you&amp;#39;d like to compare our new site vs the old - &lt;a href="http://v1.select-interactive.com" target="_blank"&gt;here&amp;#39;s the old site&lt;/a&gt;.&lt;/p&gt;</description><link>http://select/news/2013/11/si-website-v2-0-is-live</link><pubDate>11/12/2013 7:38:27 PM</pubDate></item><item><title>I Get to Attend the First Ever Chrome Dev Summit</title><description>&lt;p&gt;After &lt;a href="/news/2013/10/select-interactive-attends-edge-conference-nyc" target="_blank"&gt;attending Edge Conf NYC in September&lt;/a&gt;, I&amp;#39;ve been invited to attend the first ever Chrome Dev Summit hosted by Google, Inc. in Mountain View, CA ON Nov 20 - 21.&lt;/p&gt;
+
+&lt;p&gt;The Chrome Dev Summit offers leading developers a chance to interact with Chrome engineers to discuss new web technologies coming to Google Chrome.&lt;/p&gt;
+
+&lt;p class="quote"&gt;Connect with Chrome engineers and other leading developers for a two-day exploration of new web APIs, multi-device workflows, performance tips, and the guts of Blink. Join us in Mountain View or via the live video streams.&lt;/p&gt;
+
+&lt;p&gt;Primary topics of interest for me include web performance, building for a multi-device world, improving development productivity, and experimenting with new web API&amp;#39;s.&lt;/p&gt;
+
+&lt;p&gt;For more information, &lt;a href="http://developer.chrome.com/devsummit" target="_blank"&gt;visit the Chrome Dev Summit website&lt;/a&gt;.&lt;/p&gt;</description><link>http://select/news/2013/11/i-get-to-attend-the-first-ever-chrome-dev-summit</link><pubDate>11/5/2013 9:19:00 AM</pubDate></item><item><title>Development Tools and Workflow</title><description>&lt;p&gt;Note: Updated on November 3, 2013 - Initially published on June 6, 2012.&lt;/p&gt;
+
+&lt;p&gt;Recently many new developer tools such as project boilerplates, CSS preprocessors, CSS and JavaScript libraries/frameworks, and build scripts have been released to improve and optimize the development experience. Incorporating these tools required some change to our development environment and workflow. For example, we no longer write basic CSS, we write Sass&amp;nbsp;which compiles into CSS.&lt;/p&gt;
+
+&lt;p class="margin-keep"&gt;So what have we done to integrate these tools into our development stack? Below is a list of my development tools and project workflow.&lt;/p&gt;
+
+&lt;h3 class="subtitle"&gt;Development Tools/Environment&lt;/h3&gt;
+
+&lt;ul class="arrow"&gt;
+&lt;li&gt;IDE: &lt;a href="http://www.microsoft.com/visualstudio/eng/products/2013-editions" target="_blank"&gt;Microsoft Visual Studio 2013&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Extensions: &lt;a href="http://www.mindscapehq.com/products/web-workbench" target="_blank"&gt;Mindscape Web Workbench&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://gruntjs.com" target="_blank"&gt;GruntJS&lt;/a&gt;&amp;nbsp;to do a number of tasks - Watch our .scss files for changes, compile with Compass and output as CSS via &lt;a href="https://npmjs.org/package/grunt-contrib-compass" target="_blank"&gt;Grunt JS Plugin&lt;/a&gt;. Watch our JS files for changes and run JS Hint against them via &lt;a href="https://npmjs.org/package/grunt-contrib-jshint" target="_blank"&gt;GruntJS Plugin&lt;/a&gt;. Watch all project files and reload our browser when any changes occur during development via &lt;a href="https://npmjs.org/package/grunt-contrib-livereload" target="_blank"&gt;GruntJS Plugin&lt;/a&gt;. A custom build task to optimize all images, save .jpg images as progressive jpegs, minify and concatenate all CSS and JS files.&lt;/li&gt;
+&lt;li&gt;CSS Authoring: &lt;a href="http://www.sass-lang.com" target="_blank"&gt;Sass&lt;/a&gt; and &lt;a href="http://compass-style.org/" target="_blank"&gt;Compass&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;JavaScript Libraries: &lt;a href="http://www.modernizr.com" target="_blank"&gt;Modernizr&lt;/a&gt;, &lt;a href="http://www.jquery.com" target="_blank"&gt;jQuery&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;JavaScript linting and compilation: &lt;a href="http://www.jshint.com/" target="_blank"&gt;JS Hint&lt;/a&gt; via &lt;a href="https://npmjs.org/package/grunt-contrib-jshint" target="_blank"&gt;GruntJS Plugin&lt;/a&gt; and &lt;a href="https://github.com/mishoo/UglifyJS" target="_blank"&gt;Uglify JS&lt;/a&gt; via &lt;a href="https://github.com/mishoo/UglifyJS" target="_blank"&gt;GruntJS Plugin&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;ASP.NET 4&lt;/li&gt;
+&lt;li&gt;MS SQL Server 2012&lt;/li&gt;
+&lt;li&gt;Hosting on Windows Server 2008 running&amp;nbsp;IIS7&lt;/li&gt;
+&lt;li&gt;Development in Google Chrome (both &lt;a href="http://www.google.com/chrome" target="_blank"&gt;Stable&lt;/a&gt; and &lt;a href="https://tools.google.com/dlpage/chromesxs" target="_blank"&gt;Canary&lt;/a&gt;) using the &lt;a href="https://developers.google.com/chrome-developer-tools/docs/overview" target="_blank"&gt;Chrome Dev Tools&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Adobe Photoshop &amp;amp; Illustrator&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 class="subtitle"&gt;Development Workflow&lt;/h3&gt;
+
+&lt;ul class="arrow"&gt;
+&lt;li&gt;Begin with an &lt;a href="https://github.com/select-interactive/SI-Project-Template" target="_blank"&gt;in-house project template&lt;/a&gt; based off &lt;a href="https://github.com/h5bp/html5-boilerplate" target="_blank"&gt;HTML5 Boilerplate&lt;/a&gt;, configured for ASP.NET 4 on IIS7&amp;nbsp;&lt;/li&gt;
+&lt;li&gt;Implement site/app design and incorporate Responsive Design Strategy - HTML, Sass/Compass&lt;/li&gt;
+&lt;li&gt;Implement functionality - JavaScipt, .NET Webservices, SQL&lt;/li&gt;
+&lt;li&gt;Testing &amp;amp; Performance Tuning on local machine with the Chrome Dev Tools and &lt;a href="http://developers.google.com/speed/pagespeed/insights/" target="_blank"&gt;Google Page Speed Insights&lt;/a&gt;. For website projects, we will test in Chrome,&amp;nbsp;Firefox, Safari, IE 8-10, and a variety of mobile devices (iPhone/iPad, Android phones and tablets).&lt;/li&gt;
+&lt;li&gt;Build &amp;amp; Optimization - GruntJS for CSS concatenation, minification, and&amp;nbsp;image optimization. ASP.NET compilation and build.&lt;/li&gt;
+&lt;li&gt;Setup and integration of Google Analytics and Google Webmaster Tools accounts&lt;/li&gt;
+&lt;li&gt;Publish&lt;/li&gt;
+&lt;/ul&gt;</description><link>http://select/news/2013/11/development-tools-and-workflow</link><pubDate>11/3/2013 6:13:28 PM</pubDate></item><item><title>Open Realty Advisors Website Project</title><description>&lt;p&gt;We&amp;rsquo;re now underway in the development of a new website for Open Realty Advisors. The design process is being handled by the &lt;a href="http://www.slantpartners.com" target="_blank"&gt;Dallas based marketing firm, Slant Partners&lt;/a&gt;. We will be tasked with implementing their design with a responsive design strategy to provide maximum support to mobile devices.&lt;/p&gt;
+
+&lt;p&gt;Check back soon for project updates and announcement of the full site launch. For now, you can view their splash page at &lt;a href="http://www.openra.com" target="_blank"&gt;www.openra.com&lt;/a&gt;.&lt;/p&gt;</description><link>http://select/news/2013/10/open-realty-advisors-website-project</link><pubDate>10/30/2013 11:42:00 AM</pubDate></item><item><title>BBVA Compass Plaza Refreshed</title><description>&lt;p&gt;Today we&amp;rsquo;ve launched an updated&amp;nbsp;website for &lt;a href="http://www.bbvacompassplaza.com" target="_blank"&gt;BBVA Compass Plaza&lt;/a&gt;. Located on 2200 Post Oak Boulevard and the first office building delivered in over 30 years in the Galleria area in Houston, BBVA Compass Plaza introduces a modern office environment to Uptown. The development is a joint venture between Stream Realty Partners and The Redstone Companies.&lt;/p&gt;
+
+&lt;p&gt;To complete this project we worked closely with Stream Realty&amp;rsquo;s Houston marketing team. They provided approved artwork (Adobe Illustrator files) from both BBVA Compass and the Redstone Companies. We used the AI files as our blueprint for site development.&lt;/p&gt;
+
+&lt;p&gt;To create the splash page and page title animations, we used CSS3 Transitions in browsers that support them and fallback to jQuery fade in/out for older browsers.&lt;/p&gt;
+
+&lt;p&gt;With a fixed width design in place, we needed to implement it in such a way that would allow mobile users an&amp;nbsp;optimized&amp;nbsp;viewing experience. To achieve this we used media queries&amp;nbsp;to create a responsive design, allowing&amp;nbsp;the design to adapt as necessary to the device viewing it.&lt;/p&gt;
+
+&lt;div class="news-body-img"&gt;&lt;img alt="BBVA Compass Plaza Full Screen" height="730" src="/img/news/projects/bbva-full.jpg" width="1004" /&gt;
+&lt;p class="caption"&gt;Fixed width design - desktop view&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="row news-body-img"&gt;
+&lt;div class="span-6"&gt;&lt;img height="687" src="/img/news/projects/bbva-mbl.jpg" width="577" /&gt;
+&lt;p class="caption"&gt;Resulting responsive design&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="span-6 omega"&gt;&lt;img height="687" src="/img/news/projects/bbva-mbl-nav.jpg" width="577" /&gt;
+&lt;p class="caption"&gt;Responsive design with menu open&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><link>http://select/news/2013/10/bbva-compass-plaza-refreshed</link><pubDate>10/1/2013 6:16:47 PM</pubDate></item><item><title>Select Interactive Attends Edge Conference NYC</title><description>&lt;p&gt;On September 23, 2013, I was lucky enough to be 1 of 200 developers world-wide to attend &lt;a href="http://edgeconf.com/2013-nyc/" target="_blank"&gt;Edge Conferece 2013&lt;/a&gt; in New York City. &amp;nbsp;A one-day conference focusing on advanced web technologies with a much different approach than other conferences I&amp;#39;ve attended.&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;Edge Conf is about everyone learning from everyone else. All attendees were handpicked,&amp;nbsp;required to apply&amp;nbsp;and provide examples of knowledge and experiences they could share with others. With topics covering responsive images, rendering performance, real time data, and legacy clients, this conference was ideal for me. Working on&amp;nbsp;responsive images and rendering performance daily, I knew I had a of information I could share.&lt;/p&gt;
+
+&lt;p&gt;While I feel the audience may have been a little short changed in the time available to contribute during the sessions, the real interaction amongst the developers took place at the &amp;quot;after party&amp;quot; at the Park NYC, hosted by Facebook. Here we had the opportunity to meet and chat with all of the attendees to really discuss more individual problems and experiences. I met Andrew Mahon, founding partner of &lt;a href="http://typecode.com/" target="_blank"&gt;TypeCode&lt;/a&gt;, and talked about strategies we&amp;#39;ve both used to handle responsive images. He&amp;#39;s got a pretty slick site and I&amp;#39;ve been impressed with his work, specifically &lt;a href="http://typecode.com/work/google-currents/" target="_blank"&gt;Google Currents&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p class="note"&gt;Side note: if you&amp;#39;re curious what the responsive image&amp;nbsp;issue is, allow me to explain. Imagine having a beautiful, 2500px by 1500px image as the background of your website. Well that image is probably 1MB+&amp;nbsp;and an iPhone 5+ has a width of 320px and height of 568px. So trying to use that same image as the background of your site on an iPhone is going to load slowly and be extremely too large, causing it to eat up memory and be scaled down. So what do we do to solve that? Do we create multiple background images for a widescreen desktop, a laptop, a tablet, a smart phone? What about the retina displays? Do we create separate images for them as well? -- This is the responsive images problem.&lt;/p&gt;
+
+&lt;p&gt;I must say I thoroughly enjoyed listening the Google Developer Relations Team members when they participated on the different panels. Paul Lewis and BlackBerry&amp;#39;s&amp;nbsp;Eli Fidler&amp;nbsp;were great during the discussion of rendering performance. Jake Archibald and Alex Russell provided some great insight throughout the entire day. &lt;a href="http://www.youtube.com/watch?v=YfvMQ316hMU&amp;amp;feature=youtu.be&amp;amp;t=41m11s" target="_blank"&gt;Alex had one of the highlights of the day when he shares his thoughts about Microsoft providing support for Internet Explorer&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It was my favorite conference to date, and I felt truly fortunate to meet up with people from all over the world to ramble on and on about the issues I face every day.&lt;/p&gt;
+
+&lt;div class="news-body-img"&gt;&lt;img alt="Google NYC " height="521" src="/img/news/google-nyc.jpg" width="600" /&gt;
+&lt;p class="caption"&gt;Google NYC Office - Leaving the Conference - Ready to Visit Again!&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="news-body-img"&gt;&lt;img alt="Edge Conf Badge" height="400" src="/img/news/jb-edge.jpg" width="300" /&gt;
+&lt;p class="caption"&gt;Edge Conf Badge&lt;/p&gt;
+&lt;/div&gt;</description><link>http://select/news/2013/10/select-interactive-attends-edge-conference-nyc</link><pubDate>10/1/2013 3:42:00 PM</pubDate></item><item><title>Building a Better Web: Stream Realty Partners</title><description>&lt;p&gt;After months of hard work and collaboration between ourselves and the marketing team of Stream Realty Partners, we&amp;#39;re excited to launch the completely redesigned and redeveloped&amp;nbsp;&lt;a href="http://www.streamrealty.com" target="_blank"&gt;www.streamrealty.com&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;As one of the fastest growing leasing and management companies in the nation, with over 100 million square feet of office, industrial, and retail assignments, it was necessary to update their online web presence and marketing strategy. Over the course of three months, we worked closely with the &lt;a href="http://www.streamrealty.com/services/marketing/" target="_blank"&gt;SRP in-house creative team&lt;/a&gt;&amp;nbsp;to put together a very modern looking, clean, elegant design.&lt;/p&gt;
+
+&lt;p&gt;During the development phase, we placed a large emphasis on performance and implemented performance strategies from the get go. We used the &lt;a href="https://developers.google.com/speed/webp/" target="_blank"&gt;WebP image format&lt;/a&gt;&amp;nbsp;throughout the site to provide the best download performance to &lt;a href="http://google.com/chrome" target="_blank"&gt;Chrome&lt;/a&gt; users. The overall savings on file size is pretty incredible with webp images. The home page dropped&amp;nbsp;from 4.3MB (due to&amp;nbsp;the large carousel images)&amp;nbsp;to 1.1MB when viewed in Chrome. To help out the other browsers, we have optimized all .jpg and .png files and used progressive jpegs throughout.&lt;/p&gt;
+
+&lt;p&gt;We built a completely customized administrative app for the SRP marketing team to manage all site content, property details, employee bios, news entries, and career opportunities. Included with this system, is built in image optimization and resizing. When a marketing admin uploads a headshot or property image, the image is automatically resized to match the site design,&amp;nbsp;optimized, and saved&amp;nbsp;as a progressive jpeg.&lt;/p&gt;
+
+&lt;h3 class="subtitle"&gt;Project Features/Enhancements&lt;/h3&gt;
+
+&lt;ul class="arrow"&gt;
+&lt;li&gt;New design and&amp;nbsp;completely rewritten code base (HTML, CSS, JavaScript front-end and .NET, MS SQL back-end)&lt;/li&gt;
+&lt;li&gt;Administrative dashboard to manage all site copy, employee bio&amp;#39;s, property listings, job postings, news entries, and a custom CRM.&lt;/li&gt;
+&lt;li&gt;Front-end performance best practices - optimized images, progressive jpegs, WebP for Chrome users, minified CSS and JavaScript.&lt;/li&gt;
+&lt;li&gt;Back-end performance best practices - Gzip compression and 30 day caching for all static content (images, stylesheets, JS files).&lt;/li&gt;
+&lt;li&gt;Custom URL structures for news entries, employee bios,&amp;nbsp;and property listings to categorize based on location and have unique URL&amp;#39;s and page title&amp;#39;s for link sharing and SEO.&lt;/li&gt;
+&lt;/ul&gt;</description><link>http://select/news/2013/05/building-a-better-web-stream-realty-partners</link><pubDate>5/13/2013 6:52:00 PM</pubDate></item><item><title>Encon Systems Website Redesign &amp; Development</title><description>&lt;p&gt;Last fall we were approached by Encon Systems, a DFW based supplier of office supplies, toner and ink, managed print programs, and IT services, to redesign and redevelop their company website. The goal was to implement a modern, professional design allowing users to easily navigate the site from any device. From an administrative standpoint, Encon needed the ability to manage all site content - page copy, featured products, testimonials, news items, job openings, etc...&lt;/p&gt;
+
+&lt;h3 class="subtitle"&gt;Design &amp;amp; Development Process&lt;/h3&gt;
+
+&lt;p&gt;With the help of our friends at &lt;a href="http://www.duotypestudio.com" target="_blank"&gt;DuoType Studio&lt;/a&gt; (DT), we presented Encon Systems with three initial design concepts, testing a variety of color palettes and typography selections aimed at successfully promoting Encon&amp;rsquo;s intended &amp;lsquo;look and feel&amp;rsquo; for their overall site. Through rounds of revision phases, we worked closely with DT to master the design process. Once the final design was approved, DT provided us with the necessary artwork and we were off and running.&lt;/p&gt;
+
+&lt;p&gt;For device agnostic browsing we used the practice known as Responsive Web Design (RWD), which is quickly becoming an industry standard for mobile web development. &lt;small&gt;(Screen shots of different viewports such as full screens, tablets, and phones are below.)&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;During the back and forth that took place during the design phase, we began the implementation of the database that would hold all site content and user account information. This allowed us to keep our development timeline on schedule as well as provide us the ability to include custom CMS integration with our initial site build, rather than having to add it later and increase development time.&lt;/p&gt;
+
+&lt;p&gt;To make prospective clients more aware of Encon&amp;rsquo;s partnered manufacturers, Encon requested an animated &amp;ldquo;commercial&amp;rdquo; for their home page. To achieve maximum device usability, this &amp;ldquo;commercial&amp;rdquo; was written using CSS3 transitions to be iOS friendly, rather than using flash, which is not compatible on many mobile devices.&lt;/p&gt;
+
+&lt;p&gt;As we prepared for launch, we used a custom build script that minifies all of our JavaScript and CSS files, as well as optimizes all images. This is done to provide optimal performance in terms of site speed and download times to the website&amp;rsquo;s visitors. &lt;a href="/news/2012/11/building-a-better-web-speed-edition" target="_blank"&gt;(Learn more about this)&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4&gt;Resulting Responsive Web Design Layouts&lt;/h4&gt;
+
+&lt;div class="news-body-img"&gt;&lt;img alt="Encon Full Design" src="/img/news/projects/encon-full.jpg" /&gt;
+&lt;p class="caption"&gt;Full Desktop Design&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="news-body-img"&gt;&lt;img alt="Encon Tablet Design" src="/img/news/projects/encon-tablet.jpg" /&gt;
+&lt;p class="caption"&gt;Tablet View - Portrait&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="row news-body-img"&gt;
+&lt;div class="span-6"&gt;&lt;img alt="Encon Phone Design" src="/img/news/projects/encon-phone.jpg" /&gt;
+&lt;p class="caption"&gt;Mobile Phone View - Portrait&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="span-6 omega"&gt;&lt;img alt="Encon Phone Design with Menu" class="nb" src="/img/news/projects/encon-phone-menu.jpg" /&gt;
+&lt;p class="caption"&gt;Mobile Phone View - With Expanded Menu&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="news-body-img"&gt;&lt;img alt="Encon Admin" class="nb" src="/img/news/projects/encon-admin.jpg" /&gt;
+&lt;p class="caption"&gt;Custom Admin CMS&lt;/p&gt;
+&lt;/div&gt;</description><link>http://select/news/2013/01/encon-systems-website-redesign-development</link><pubDate>1/9/2013 9:06:22 AM</pubDate></item><item><title>2012 - Just The Beginning</title><description>&lt;p&gt;2012 sure did come and go pretty quickly. It seems like just a few short months ago, we were in the midst of brainstorming concepts for our company name and brand, which quickly evolved into Select Interactive. Today, we&amp;rsquo;re happy to reflect back on a very fun and productive year and are looking forward to where 2013 takes us!&lt;/p&gt;
+
+&lt;h3 class="subtitle"&gt;Highlights&lt;/h3&gt;
+
+&lt;ul class="arrow"&gt;
+&lt;li&gt;Worked with some amazing&amp;nbsp;clients and launched some great projects -- &lt;a href="/news/2012/02/sid-w-richardson-foundation-site-launch" target="_blank"&gt;Sid W. Richardson Foundation Website&lt;/a&gt;, &lt;a href="http://www.duotypestudio.com" target="_blank"&gt;DuoType Studio&lt;/a&gt;, &lt;a href="/news/2013/10/bbva-compass-plaza-refreshed" target="_blank"&gt;BBVA Compass Plaza Website&lt;/a&gt;, &lt;a href="/news/2012/07/trammell-crow-center-website-launch" target="_blank"&gt;Trammell Crow Center Website&lt;/a&gt;, &lt;a href="http://www.lenoxtowersbuckhead.com" target="_blank"&gt;Lenox Towers Website Redesign + Redevelopment&lt;/a&gt;, &lt;a href="https://www.louloublue.com/" target="_blank"&gt;LouLouBLUE Online Store&lt;/a&gt;, &lt;a href="https://www.adopalert.com" target="_blank"&gt;Adopt Alert&lt;/a&gt;, and many, many more.&lt;/li&gt;
+&lt;li&gt;Attended jQuery 2012 Conference in San Francisco and &lt;a href="/news/2012/03/sxsw-interactive-conference-2012" target="_blank"&gt;South by Southwest Conference&lt;/a&gt; in Austin.&lt;/li&gt;
+&lt;li&gt;Participated in testing and provided input for the Google open source, developer workflow project, &lt;a href="http://yeoman.io/" target="_blank"&gt;Yeoman&lt;/a&gt;. Shared &lt;a href="/news/2013/11/development-tools-and-workflow" target="_blank"&gt;our current development workflow&lt;/a&gt; with the Google Chrome Developer Relations Team.&lt;/li&gt;
+&lt;li&gt;Presented&amp;nbsp;&lt;a href="/news/2012/08/lets-talk-seo" target="_blank"&gt;Search Engine Optimization (SEO)&lt;/a&gt; trends and techniques to the &lt;a href="http://nunezprgroup.com/" target="_blank"&gt;Nunez PR Group&lt;/a&gt; in Dallas.&lt;/li&gt;
+&lt;li&gt;Mentored a team of developers modern web app development techniques, tools, and best practices.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;2012 brought tremendous advancements to the web. From improvements in the browsers, mobile devices, and developer tools, it&amp;rsquo;s truly a great time to be a web developer. We&amp;rsquo;re geared up for 2013 with new mobile devices (hello iPad Mini), more talented developers joining the team, and as much energy and passion as ever to keep building a better web.&lt;/p&gt;
+
+&lt;p&gt;We would like to thank our clients for entrusting us with their most important web projects over this past year. We look forward to working with you in 2013.&lt;/p&gt;
+
+&lt;p style="text-align:center;"&gt;&lt;img alt="jQuery SF 2012 - Select Interactive" src="/img/news/jq-sf.jpg" /&gt;&lt;br /&gt;
+jQuery SF 2012 badge&lt;/p&gt;
+
+&lt;p style="text-align:center;"&gt;&lt;img alt="SF Giants game" src="/img/news/sf-giants-game.jpg" /&gt;&lt;br /&gt;
+Might as well enjoy the weather and some baseball while in SF&lt;/p&gt;</description><link>http://select/news/2013/01/2012--just-the-beginning</link><pubDate>1/3/2013 6:55:14 PM</pubDate></item><item><title>Building a Better Web: Speed Edition</title><description>&lt;p&gt;Slow websites are dying websites... People don&amp;rsquo;t wait for a slow page to load anymore. If it&amp;rsquo;s been three seconds, we&amp;rsquo;re all hitting the back button or going somewhere else. Websites and web apps need to load fast and run quickly. It doesn&amp;rsquo;t matter how great your site or product is if nobody waits to see it.&lt;/p&gt;
+
+&lt;p&gt;At Select Interactive, we do everything we can to ensure that our websites and web apps are optimized to download and run as quickly as possible. We follow a set of front-end developer best practices that includes image spriting and compression, file minification, concatenation, and caching. We also configure our servers to provide gzip compression for stylesheets and javascript files to further compress the amount of data a website visitor must download.&lt;/p&gt;
+
+&lt;p&gt;Finally, to test our project&amp;rsquo;s performance, we use &lt;a href="https://developers.google.com/speed/pagespeed/" target="_blank"&gt;Google Page Speed&lt;/a&gt; to provide us with some excellent, detailed analysis.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s our goal to deliver a project that is as optimized and fast as possible. Just take a look at the results from our latest projects:&amp;nbsp;&lt;a href="http://developers.google.com/speed/pagespeed/insights/?url=www.trammellcrowcenter.com&amp;amp;tab=desktop" target="_blank"&gt;96 out of 100&lt;/a&gt;, &lt;a href="http://developers.google.com/speed/pagespeed/insights/?url=www.oilgas-startelegram.com&amp;amp;tab=desktop" target="_blank"&gt;96 out of 100&lt;/a&gt;, and &lt;a href="http://developers.google.com/speed/pagespeed/insights/?url=www.custercourt.com&amp;amp;tab=desktop" target="_blank"&gt;96 out of 100.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style="text-align:center;"&gt;&lt;a href="/img/news/brain-on-slow-website.jpg" target="_blank"&gt;&lt;img alt="Thi is your Brain on a Slow website" src="/img/news/brain-on-slow-website.jpg" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style="font-size:.9em;"&gt;* Thanks to &lt;a href="http://www.webperformancetoday.com/2012/11/06/this-is-your-brain-on-a-slow-website-infographics/" target="_blank"&gt;Web Performance Today&lt;/a&gt; for the picture and blog idea!&lt;/p&gt;</description><link>http://select/news/2012/11/building-a-better-web-speed-edition</link><pubDate>11/12/2012</pubDate></item></channel></rss>

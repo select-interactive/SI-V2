@@ -1,0 +1,70 @@
+﻿#topbar {
+	background: $si-orange;
+	padding: 5px 10px;
+	position: relative;
+	z-index: 10;
+
+
+	@include mediaquery(larger) { 	
+		height: 6px;
+		left: 0;
+		padding: 0;
+		position: fixed;
+		top: 0;
+		width: 100%;
+
+		@include background-image(linear-gradient(left, $si-orange 0%, 
+														$si-orange 6%,
+														$si-gray-light 6%, 
+														$si-gray-light 12%,
+														$si-gray-dark 12%, 
+														$si-gray-dark 18%,
+														$si-orange 18%,
+														$si-orange 24%,
+														$si-gray-light 24%, 
+														$si-gray-light 30%,
+														$si-gray-dark 30%,
+														$si-gray-dark 36%,
+														$si-orange 36%, 
+														$si-orange 42%,
+														$si-gray-light 42%, 
+														$si-gray-light 48%,
+														$si-gray-dark 48%, 
+														$si-gray-dark 54%,
+														$si-orange 54%, 
+														$si-orange 60%,
+														$si-gray-light 60%,
+														$si-gray-light 66%,
+														$si-gray-dark 66%,
+														$si-gray-dark 72%,
+														$si-orange 72%,
+														$si-orange 78%,
+														$si-gray-light 78%,
+														$si-gray-light 84%,
+														$si-gray-dark 84%,
+														$si-gray-dark 90%,
+														$si-orange 90%,
+														$si-orange 96%,
+														$si-gray-light 96%,
+														$si-gray-light 100%));
+	}
+}
+
+#nav-trigger {	
+	border-bottom: 0;
+	color: $white;
+	font-size: 20px;	
+	height: 24px;
+	letter-spacing: 1px;
+	line-height: 24px;
+	text-transform: uppercase;
+
+	i { 
+		font-size: 24px;
+	}
+
+	span {
+		@extend %display-inline-block;
+		margin-left: 5px;
+	}
+}

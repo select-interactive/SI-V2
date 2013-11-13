@@ -1,0 +1,144 @@
+﻿$nav-width: 220px;
+
+#page-wrapper {
+
+}
+
+#nav-column {
+	@extend %text-align-center;
+	@extend %position-absolute;
+
+	background: darken($body-background, 3%);
+	bottom: 0;
+	height: 100%;
+	left: 0;
+	padding: 39px 10px 35px;
+	top: 0;
+	width: $nav-width;
+	z-index: 100;
+
+	@include box-shadow(1px 0 3px #999);
+	@include transform(translateX(0 - $nav-width));
+	@include transition(transform .3s ease);
+
+	@include mediaquery(larger) {
+		left: 0;
+		position: fixed;
+		z-index: 1;
+
+		@include transform(translateX(0));
+	}
+
+	&.in {
+		@include transform(translateX(0));
+	}
+
+	.lt-ie9 & {
+		border-right: 1px solid #999;
+	}
+}
+
+#content-wrapper {
+	@include container;
+
+	max-width: $max-container-width;
+	margin-left: 0;
+	padding-bottom: 35px;
+	padding-top: 35px;
+
+	@include mediaquery(larger) {
+		margin-left: $nav-width;
+		padding-left: $grid-padding * 2;
+		padding-right: $grid-padding * 2;
+	}
+}
+
+// column options
+.col {
+	@include reset-columns;
+	margin-bottom: $gutter-width * 2;
+}
+
+.cols-2 .cols-4-half,
+.cols-4-half {
+	.col {
+		@include mediaquery(largeScreen) {
+			@include span-columns(6);
+
+			&:nth-child(2n) {
+				@include omega;
+			}
+		}
+
+		@include mediaquery(wide) {
+			@include span-columns(3);
+
+			margin-bottom: $gutter-width;
+
+			&:nth-child(2n) {
+				@include remove-omega;
+			}	
+
+			&:nth-child(4n) {
+				@include omega;
+			}
+		}
+	}
+}
+
+.cols-3-2 {
+	.col {
+		@include mediaquery(largeScreen) {
+			@include span-columns(6);
+			margin-bottom: $gutter-width * 2;
+
+			&:nth-child(2n) {
+				@include omega;
+			}
+		}
+
+		@include mediaquery(large) {
+			@include span-columns(4);
+
+			margin-bottom: $gutter-width;
+
+			&:nth-child(2n) {
+				@include remove-omega;
+			}	
+
+			&:nth-child(3n) {
+				@include omega;
+			}
+		}
+	}
+}
+
+.cols-2 {
+	@include mediaquery(large) {	
+		.col {
+			@include span-columns(6);
+
+			margin-bottom: $gutter-width;	
+
+			&.col-large {
+				@include span-columns(7);
+			}
+
+			&.col-xlarge {
+				@include span-columns(8);
+			}
+
+			&.col-small {
+				@include span-columns(5);
+			}
+
+			&.col-xsmall {
+				@include span-columns(4);
+			}
+
+			&:nth-child(2n) {
+				@include omega;
+			}
+		}
+	}
+}

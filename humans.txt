@@ -1,0 +1,19 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+  Developer: Jeremy Burton
+  Site: www.select-interactive.com
+  Twitter: @Sel_Interactive
+  Location: Fort Worth, TX
+
+# THANKS
+  Candice Riley Campbell - Design Consultant
+  Site: www.duotypestudio.com
+  Location: Atlanta, GA
+
+# TECHNOLOGY COLOPHON
+  HTML5, CSS3,
+  Normalize.css, Sass/Compass
+  jQuery, Modernizr, GruntJS
+  MS Visual Studio 2012

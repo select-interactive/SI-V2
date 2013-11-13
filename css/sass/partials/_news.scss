@@ -1,0 +1,139 @@
+﻿$padding: 5%;
+
+.news-item-summary {
+	@extend .card;
+}
+
+.news-img {
+	@extend %text-align-center;
+
+	background: #fcfcfc;
+	margin: 0 0 $padding;
+
+	@include box-shadow(0 1px 1px #999);
+}
+
+.news-img-primary {
+	$neg-margin: 0 - $grid-padding;
+
+	margin: -20px $neg-margin $padding;
+	@include box-shadow(0 0 0 #fff);
+
+	@include mediaquery(large) {
+		margin: 0 $neg-margin ($padding / 2);
+	}
+}
+
+.news-post-wrapper{
+	padding-left: 2%;
+	padding-right: 2%;
+
+	@include mediaquery(large) {
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+
+	@include mediaquery(wide) {
+		padding-left: 18%;
+		padding-right: 18%;
+	}
+
+	@include mediaquery(xwide) {
+		padding-left: 24%;
+		padding-right: 24%;
+	}
+}
+
+.news-headline {
+	@extend .si-orange;
+	font-size: em(20px);
+	line-height: 1.4;
+	padding: 0 $padding;
+
+	a {
+		border-bottom: 0;
+		&:hover { border-bottom: 1px dotted; }
+	}
+}
+
+.news-headline-large {
+	font-size: em(26px);
+	margin-bottom: 15px;
+	padding-left: 0;
+	padding-right: 0;	
+
+	@include mediaquery(large) {
+		font-size: em(36px);
+		margin-bottom: 0;
+	}
+}
+
+.news-data,
+.news-tags {
+	color: $si-gray-dark;
+	font-size: em(15px);
+}
+
+.news-tags {
+	line-height: 1.6;
+	margin: 15px 0;
+	
+	a {
+		margin: 0 5px;
+	}
+}
+
+.news-summary,
+.news-body {
+	padding: ($padding / 3) $padding ($padding / 2);
+
+	p:last-of-type { @extend %no-margin; }
+
+	p.margin-keep { margin-bottom: 24px !important; }
+}
+
+.news-body {
+	font-size: em(18px);
+	line-height: 1.5;
+	padding: 15px 0 30px;
+
+	p,
+	ul {
+		margin-bottom: 24px;
+	}
+}
+
+.news-body-img {
+	@extend .text-center;
+
+	margin: $padding 0;
+
+	.caption {
+		color: darken($si-gray-dark, 5%);
+		font-size: em(14px);
+	}
+}
+
+.quote,
+.note {
+	background: #f4f4f4;
+	border-left: 5px solid $si-orange;
+	margin-left: 5% !important;
+	margin-right: 5% !important;
+	padding: 10px;
+	
+	@include box-shadow(0 0 1px #bbb);
+}
+
+.quote {
+	font-size: em(15px);
+
+	&:before,
+	&:after {
+		content: '"';
+	}
+}
+
+.note {
+	font-size: em(13px);	
+}

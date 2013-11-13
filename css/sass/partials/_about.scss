@@ -1,0 +1,25 @@
+﻿.headshot {
+	@extend .float-left;
+
+	background: $white;
+	border: 1px solid #dadada;
+	margin: 0 10px 5px 0;
+	padding: 3px;
+
+	@include box-shadow(0 0 4px #ccc);
+}
+
+#partners-grid {
+	@extend .clearfix;
+	@extend %text-align-center;
+
+	a {
+		@extend %display-inline-block;
+		border-bottom: 0;
+		margin: 0 20px 20px;
+	}
+
+	@include mediaquery(larger) {
+		margin-bottom: 35px;
+	}
+}

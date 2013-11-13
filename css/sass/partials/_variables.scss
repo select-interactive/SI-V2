@@ -1,0 +1,117 @@
+﻿/**
+ * Project SASS Variables
+ */
+
+/** Dimensions + Typography
+ -----------------------------*/
+$max-width:			100%;
+$max-container-width: 100%;
+//$max-width-px:		$max-width + 0px;
+$base-font-size:	16px;
+$base-line-height:	22px;
+
+
+// Susy Settings
+// $max-width = ($total-columns * ($base-font-size * $column-width) + (($total-columns - 1)  * $base-font-size)
+$max-columns:   12;
+$total-columns:	12;
+//$column-width:	(($max-width - (($total-columns - 1) * $base-font-size)) / ($total-columns * $base-font-size)) + 0em;
+$column-width:  4em;
+$gutter-width:	1em;
+$grid-padding:	$gutter-width;
+
+
+/** Colors
+ -----------------------------*/
+// Base Colors
+$black:			#000;
+$darker-gray:	#222;
+$dark-gray:		#333;
+$gray:			#555;
+$light-gray:	#999;
+$lighter-gray:	#eee;
+$white:			#fff;
+
+// Accent Colors
+$blue:			#049cdb;
+$dark-blue:		#0064cd;
+$green:			#46a546;
+$red:			#9d261d;
+$yellow:		#ffc40d;
+$orange:		#f89406;
+$pink:			#c3325f;
+$purple:		#7a43b6;
+
+// Project Specific Colors
+$si-gray-darkest: #444;
+$si-gray-darker:  #666;
+$si-gray-dark:    #8e8d8e;
+$si-gray-light:   #b8b8b9;
+$si-gray-lighter: #d8d8d9;
+$si-orange:		  #dda14a;
+
+
+/** Fonts
+ -----------------------------*/
+$av-35:		  'Avenir-35';
+$av-medium:   'Avenir-Medium';
+$av-black:    'Avenir-Black';
+$telegrafico: 'Telegrafico';
+
+
+/** Body
+ -----------------------------*/
+$body-background:	#fcfcfc;
+$body-color:		$dark-gray;
+
+
+/** Links
+ -----------------------------*/
+$link-color:		$si-orange;
+$link-color-hover:	darken($link-color, 15%);
+
+
+/** Buttons
+ -----------------------------*/
+$btn-bg:				$gray;
+$btn-bg-accent:			darken($btn-bg, 10%);
+$btn-border:			$gray;
+$btn-border-radius:		1px;
+$btn-box-shadow:		inset 0 1px 0 rgba(255, 255, 255, .2), 0 1px 2px rgba(0, 0, 0, .05);
+$btn-box-shadow-active:	inset 0 2px 4px rgba(0, 0, 0, .15), 0 1px 2px rgba(0, 0, 0, .05);
+
+
+/** Forms
+ -----------------------------*/
+$row-margin:				10px;
+$label-width:				100px;
+$label-margin-right:		5px;
+$input-bg:					$white;
+$input-width:				210px;
+$input-height:				auto;
+$input-padding:				10px;
+$input-border:				#ccc;
+$input-border-focus:		rgba(82, 168, 236, .8);
+$input-border-radius:		3px;
+$input-box-shadow:			inset 0 1px 1px rgba(0, 0, 0, .075);
+$input-box-shadow-focus:	inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(82, 168, 236, .6);
+$input-disabled-bg:			$lighter-gray;
+$input-disabled-border:		#ddd;
+$input-transition:			all .2s linear;
+
+// Form states and alerts
+$warning-text:		#c09853;
+$warning-bg:		#fcf8e3;
+$warning-border:	darken(adjust-hue($warning-bg, -10), 3%);
+
+$error-text:		#b94a48;
+$error-bg:			#f2dede;
+$error-border:		darken(adjust-hue($error-bg, -10), 3%);
+
+$success-text:		#468847;
+$success-bg:		#dff0d8;
+$success-border:	darken(adjust-hue($success-bg, -10), 5%);
+
+$info-text:			#3a87ad;
+$info-bg:			#d9edf7;
+$info-border:		darken(adjust-hue($info-bg, -10), 7%);

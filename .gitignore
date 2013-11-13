@@ -1,0 +1,10 @@
+#Items to ignore in GIT
+
+#Ignore the SASS Cache
+.sass-cache/
+
+#Ignore our WebWorkbench settings
+WebWorkbench.mswwsettings
+
+#Ignore our web.config to hide Database logins
+Web.config

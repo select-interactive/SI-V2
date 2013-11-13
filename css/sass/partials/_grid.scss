@@ -1,0 +1,121 @@
+﻿/**
+ * Layout styles
+ */
+
+/** Border Box
+  * Padding not included in width. (http://paulirish.com/2012/box-sizing-border-box-ftw/)
+  ----------------------------*/
+* { @include box-sizing(border-box); }
+
+
+// Media Queries
+$bp-massive:	1824px;
+$bp-xwide:		1524px;
+$bp-wide:		1224px;
+$bp-large:		1024px;
+$bp-tablet:		768px;
+$bp-phone-land-wide: 568px;
+$bp-phone-land: 480px;
+$bp-phone-port: 320px;
+
+
+@mixin mediaquery($point) {
+	@if $point == massive {
+		@media (min-width: $bp-massive / $base-font-size + 'em') { @content; }
+	}
+	@if $point == xwide {
+		@media (min-width: $bp-xwide / $base-font-size + 'em') { @content; }
+    }
+	@if $point == wide {
+		@media (min-width: $bp-wide / $base-font-size + 'em') { @content; }
+    }
+	@if $point == larger {
+		@media (min-width: ($bp-large + 1) / $base-font-size + 'em') { @content; }
+	}
+	@if $point == large {
+		@media (min-width: $bp-large / $base-font-size + 'em') { @content; }
+	}
+	@if $point == tabletPlus { // includes landscape tablets not portrait
+		@media (min-width: ($bp-tablet + 1) / $base-font-size + 'em') { @content; }
+	}
+	@if $point == largeScreen { // includes landscape tablets
+		@media (min-width: $bp-tablet / $base-font-size + 'em') { @content; }
+	}
+	@if $point == tablet {
+		@media (min-width: $bp-tablet / $base-font-size + 'em') and (max-width: $bp-large / $base-font-size) { @content; }
+	}
+	@if $point == mobileOnly {
+		@media (max-width: $bp-tablet / $base-font-size + 'em') { @content; }
+	}
+	@if $point == mobile {
+		@media (max-width: ($bp-large - 1) / $base-font-size + 'em') { @content; }
+	}
+	@if $point == phone {
+		@media (max-width: ($bp-tablet - 1) / $base-font-size + 'em') { @content; }
+	}
+	@if $point == phone-land-wide {
+		@media (min-width: $bp-phone-land-wide / $base-font-size + 'em') { @content; }
+	}
+	@if $point == phone-land {
+		@media (min-width: $bp-phone-land / $base-font-size + 'em') and (orientation: landscape) { @content; }
+	}
+	@if $point == phone-portrait {
+		@media (max-width: $bp-phone-land / $base-font-size + 'em') and (orientation: portrait) { @content; }
+	}
+	@if $point == retina {
+		@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) { @content; }
+	}
+}
+
+// mobile only
+.mbl-only {
+	@include mediaquery(larger) {
+		display: none;
+	}
+}
+
+
+.no-mbl {
+	@include mediaquery(phone) {
+		display: none;
+	}
+}
+
+// Rows/Columns/Clearfix
+.clearfix:before,.clearfix:after{content: "";display: table;}.clearfix:after{clear:both;}.clearfix{*zoom:1;}
+
+// Row class
+.row { 
+	@extend .clearfix;
+
+	margin: 0 0 $gutter-width 0;
+	padding: 0;
+
+	&.no-marg { @extend %no-margin; }
+	&.no-pad { @extend %no-padding; }
+
+	&.divider {
+		border-bottom: 4px solid $si-gray-darker;
+		margin-bottom: $gutter-width * 2;
+		padding-bottom: $gutter-width;
+	}
+
+	@include mediaquery(mobileOnly) {
+		margin-bottom: 0;
+	}
+}
+
+// Susy Layout classes
+.span-1 { @include span-columns(1, $total-columns); }
+.span-2 { @include span-columns(2, $total-columns); }
+.span-3 { @include span-columns(3, $total-columns); }
+.span-4 { @include span-columns(4, $total-columns); }
+.span-5 { @include span-columns(5, $total-columns); }
+.span-6 { @include span-columns(6, $total-columns); }
+.span-7 { @include span-columns(7, $total-columns); }
+.span-8 { @include span-columns(8, $total-columns); }
+.span-9 { @include span-columns(9, $total-columns); }
+.span-10 { @include span-columns(10, $total-columns); }
+.span-11 { @include span-columns(11, $total-columns); }
+.span-12 { @include span-columns(12, $total-columns); }
+.omega { @include omega; }

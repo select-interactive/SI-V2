@@ -1,0 +1,37 @@
+﻿/** Header
+ -----------------------------*/
+#masthead {
+	margin: 0 0 35px;
+
+	a { border-bottom: 0; }
+}
+
+
+/** Nav 
+ -----------------------------*/
+#nav-main {
+	text-transform: uppercase;
+
+	ul,
+	li {
+		@extend %no-margin;
+		@extend %no-padding;
+	}
+
+	ul {
+		@extend %no-bullets;
+	}
+
+	li {
+		margin: 15px 0 0;
+		&:first-child { margin-top: 0; }
+	}
+
+	a {
+		@extend .av-medium;
+		
+		border-bottom: 0;
+		color: $si-orange;
+		font-size: em(20px);
+	}
+}

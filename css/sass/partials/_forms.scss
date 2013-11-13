@@ -1,0 +1,174 @@
+﻿/**
+ * Project Form Styles
+ */
+
+/** Forms
+ -----------------------------*/
+form,
+.form {
+	background: #fefefe;
+	border: 1px solid #e0e0e0;
+	margin: 0 0 $base-line-height / 1.5;	
+	padding: $gutter-width * 2;
+	
+	@include box-shadow(inset 0 0 8px #ddd);
+
+	@include mediaquery(large) {
+		//padding: $gutter-width;
+	}
+
+	// heading
+	.heading,
+	.sub-title {
+		margin: 0 0 $gutter-width !important;
+	}
+
+	// rows
+	.row {
+		margin: 0 0 15px;
+	}
+
+	// options
+	.options {
+		margin: 0;
+		padding: 0;
+
+		li {
+			display: block;
+			margin: 0;
+			padding: 0;
+
+			@include mediaquery(large) {
+				display: inline;
+			}
+		}
+	}
+
+	// labels -  by default go block 
+	label {
+		@extend .av-medium;
+		@extend .text-small;
+
+		display: block;
+		margin: 0 0 3px;
+
+		// inline labels
+		.form-inline &,
+		&.lbl-inline {
+			display: inline-block;
+			margin: 0 5px 0 0;
+		}
+
+		// labels for checkboxes/radio buttons
+		&.lbl-cb {
+			cursor: pointer;
+			display: inline-block;
+			margin: 0 20px 0 5px;
+			vertical-align: middle;
+		}
+	}
+
+	// reset inputs/textareas/selects
+	input[type=text],
+	input[type=email],
+	input[type=tel],
+	input[type=url],
+	input[type=password],
+	textarea,
+	select {
+		border: 1px solid #ccc;
+		color: $body-color;
+		padding: $input-padding;
+
+		// default to 100% width for mobile
+		width: 100%;
+
+		// focus state
+		&:focus {
+			border-color: $si-orange;
+			outline: rgba($si-orange, .8) solid 1px;
+		}
+
+		// invalid fields
+		&.invalid {
+			background: lighten($error-bg, 7%);
+			border-color: $error-border;
+		}
+
+		@include mediaquery(large) {
+			max-width: 700px;
+			width: 100%;
+		}
+	}
+
+	&.form-full-width {
+		input[type=text],
+		input[type=email],
+		input[type=tel],
+		input[type=url],
+		input[type=password],
+		textarea {
+			max-width: 100% !important;
+			width: 100% !important;
+		}
+	}
+	
+	// textarea specific
+	textarea {
+		height: auto;
+		height: 200px;
+		resize: none;
+	}
+
+	// checkboxes/radio buttons
+	input[type=checkbox],
+	iput[type=radio] {
+		margin: -2px 0 0;
+		vertical-align: middle;
+	}
+
+	// visible states
+	&.hidden,
+	.hidden {
+		display: none;
+	}
+}
+
+#form-login {
+	@include span-columns(6);
+	@include pre(3);
+}
+
+/** Status
+ -----------------------------*/
+.status {
+	p {
+		border: 1px solid transparent;
+		font-size: .9em;
+		padding: 5px;
+
+		&.error {
+			background: $error-bg;
+			border-color: $error-border;
+			color: $error-text;
+		}
+
+		&.info {
+			background: $info-bg;
+			border-color: $info-border;
+			color: $info-text;
+		}
+
+		&.success {
+			background: $success-bg;
+			border-color: $success-border;
+			color: $success-text;
+		}
+
+		&.warning {
+			background: $warning-bg;
+			border-color: $warning-border;
+			color: $warning-text;
+		}
+	}
+}

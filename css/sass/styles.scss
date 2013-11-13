@@ -1,0 +1,55 @@
+﻿/*!
+ * CSS for www.select-interactive.com
+ *
+ * @author: Jeremy Burton (jeremy@select-interactive.com/www.select-interactive.com)
+ */
+
+// SASS Imports
+@import "compass";
+@import "compass-placeholders";
+@import "susy";
+@import "vendor/all";
+@import "partials/all";
+
+
+/** Preferred Styling
+ -------------------------------
+el/class { attributes in alphabetical order }
+ -----------------------------*/
+
+
+/** Global Styles
+ -----------------------------*/
+html { 
+	// Always show vertical scroll bar in window
+	overflow-y: scroll;
+
+	// Prevent iOS, WinMobile from adjusting font size
+    -webkit-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+} 
+
+// Global body styles
+body {
+	// Font
+	@extend .av-35;
+	font-size: $base-font-size; 
+	line-height: $base-line-height;
+	text-align: left;
+
+	// Color
+	background: $body-background; 
+	color: $body-color;
+}
+
+// Selection
+::-moz-selection{ background: $si-orange; color: #fff; }
+::selection{ background: $si-orange; color: #fff; }
+
+// Browse Happy prompt
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}

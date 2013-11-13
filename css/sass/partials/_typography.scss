@@ -1,0 +1,209 @@
+﻿/**
+ * Typography styles
+ * Fonts, type helpers, headers, body text, lists, and other typography helpers
+ */
+
+
+/** Fonts
+ -----------------------------*/
+@font-face {
+    font-family: 'Telegrafico';
+    src: url('/font/telegrafico.eot');
+    src: url('/font/telegrafico.eot?#iefix') format('embedded-opentype'),
+         url('/font/telegrafico.woff') format('woff'),
+         url('/font/telegrafico.ttf') format('truetype'),
+         url('/font/telegrafico.svg#TelegraficoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Avenir-35';
+    src: url('/font/avenir-35-webfont.eot');
+    src: url('/font/avenir-35-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/font/avenir-35-webfont.woff') format('woff'),
+         url('/font/avenir-35-webfont.ttf') format('truetype'),
+         url('/font/avenir-35-webfont.svg#avenir35') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Avenir-Medium';
+    src: url('/font/avenir-Medium-webfont.eot');
+    src: url('/font/avenir-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/font/avenir-Medium-webfont.woff') format('woff'),
+         url('/font/avenir-Medium-webfont.ttf') format('truetype'),
+         url('/font/avenir-Medium-webfont.svg#avenirMedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Avenir-Black';
+    src: url('/font/avenir-black-webfont.eot');
+    src: url('/font/avenir-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/font/avenir-black-webfont.woff') format('woff'),
+         url('/font/avenir-black-webfont.ttf') format('truetype'),
+         url('/font/avenir-black-webfont.svg#avenirblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.telegrafico,
+.av-35,
+.av-medium,
+.av-black {
+	@extend %font-weight-normal;
+}
+
+.telegrafico {
+	font-family: $telegrafico;
+}
+.av-35{
+	font-family: $av-35;
+}
+.av-medium {
+	font-family: $av-medium;
+}
+.av-black {
+	font-family: $av-black;
+}
+
+
+// Helpers
+.text-left { @extend %text-align-left; }
+.text-center { @extend %text-align-center; }
+.text-right { @extend %text-align-right; }
+.text-justify { @extend %text-align-justify; }
+.text-xlarge { font-size: 1.4em; }
+.text-larger { font-size: 1.25em; }
+.text-large { font-size: 1.1em; }
+.text-small { font-size: .9em; }
+.text-smaller { font-size: .75em; }
+.text-xsmall { font-size: .6em; }
+.si-orange { color: $si-orange; }
+
+
+// Headers
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	margin: 0;
+	text-rendering: optimizelegibility; // Fix the character spacing for headings
+}
+
+.headline {
+	@extend .av-black;
+	
+	color: $si-gray-dark;
+	font-size: em(20px);
+	line-height: 1;
+	margin: 0 0 15px;
+	text-shadow: 0 1px 0 #fff;
+
+	&.headline-large {
+		@extend .av-35;
+		@extend .si-orange;
+		@extend %text-align-center;
+		
+		font-size: em(26px);
+		letter-spacing: 2px;
+		margin-bottom: 25px;
+		text-transform: uppercase;
+
+		@include mediaquery(large) {
+			font-family: $av-medium;
+			font-size: em(40px);
+			margin-bottom: 40px;
+		}
+	}
+}
+
+.subtitle {
+	//@extend .si-orange;
+
+	font-size: em(20px);
+	margin: 0 0 5px;
+
+	&.subtitle-large {
+		font-size: em(25px);
+		line-height: 1.25;
+	}
+}
+
+.subheading {
+	@extend .si-orange;
+	
+	border-bottom: 1px dotted $si-gray-dark;
+	font-size: em(20px);
+	margin: 0 0 5px;
+	padding: 0 0 2px;
+}
+
+
+// Body Text
+p {
+	margin: 0 0 $base-line-height / 2;
+}
+
+
+// Lists
+ul, ol {
+	padding: 0;
+	margin: 0 0 ($base-line-height / 2) 25px;
+
+	&.no-style {
+		@extend %no-bullets;
+		margin-left: 0;
+	}
+
+	&.arrow {
+		@extend %no-bullets;
+		margin-left: 14px;
+		//list-style-image: url(/img/list-style.v1.png);
+	}
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+	margin-bottom: 0;
+}
+li {
+	line-height: $base-line-height;
+
+	.no-style &,
+	.arrow & {
+		margin-top: 10px;
+		&:first-child { margin-top: 0; }
+	}
+
+	.arrow & {
+		background: url(/img/list-style.v1.png) no-repeat 0 8px;
+		line-height: 1.5;
+		padding: 0 0 0 14px;
+	}
+
+	.li-mrg-small & {
+		margin-top: 5px;
+	}
+}
+
+
+// Links
+a {
+	@extend %text-decoration-none;
+
+	border-bottom: 1px dotted;
+	color: $link-color;
+
+	@include transition(color .2s ease);
+
+	&.no-border {
+		border-bottom: 0 !important;
+	}
+
+	&:hover { color: $link-color-hover; }
+}
+
+strong {
+	@extend .av-medium;
+	font-weight: normal;
+}

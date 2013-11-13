@@ -1,0 +1,56 @@
+﻿.project {
+	$spacing: 25px;
+
+	@extend .clearfix;
+	
+	border-bottom: 3px solid $si-gray-dark;
+	margin: 0 0 $spacing;
+	padding-bottom: $spacing;
+
+	&:last-of-type {
+		border-bottom: 0;
+	}
+
+	@include mediaquery(xwide) {
+		margin: 0 12.5% $spacing;
+	}
+}
+
+
+.project-img {
+	display: none;
+
+	@include mediaquery(phone-land-wide) {
+		@include span-columns(4);
+	}
+
+	@include mediaquery(largeScren) {
+		@include span-columns(5);
+	}
+}
+.project-info {
+	@include reset-columns;
+
+	@include mediaquery(phone-land-wide) {
+		@include span-columns(8);
+		@include omega;
+	}
+
+	@include mediaquery(largeScren) {
+		@include span-columns(7);
+	}
+}
+
+.project-title {
+	font-size: em(22px) !important;
+	margin-bottom: 10px !important;
+	text-align: left !important;
+
+	@include mediaquery(phone-land-wide) {
+		margin-bottom: 20px !important;
+	}
+
+	@include mediaquery(large) {
+		font-size: em(30px) !important;
+	}
+}
