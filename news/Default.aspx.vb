@@ -23,6 +23,8 @@ Partial Class news_Default
 
             meta = html.Substring(html.IndexOf("<div id=""meta-desc"" class=""visuallyhidden"">") + 43)
             meta = meta.Substring(0, meta.IndexOf("</div>"))
+
+            ltrlJS.Text = "<script>window.SI=window.SI || {};SI.isEntry=true;</script>"
         ElseIf Not tagUrl Is Nothing AndAlso tagUrl.Length > 0 Then
             Dim theTitle() As String = tagUrl.Split("-")
 

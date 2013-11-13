@@ -14,5 +14,4 @@
 </asp:Content>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="cphJS" Runat="Server">
-    <script defer src="/js/si/portfolio.v-1.0.js"></script>
 </asp:Content>

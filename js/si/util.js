@@ -230,11 +230,41 @@
         }
     };
 
+    SI.initTracking = function() {
+        var links = document.querySelectorAll( '.track-event' ),
+            i = 0,
+            len = links.length;
+            
+        for ( ; i < len; i++ ) {
+            links[i].addEventListener( 'click', trackEvent, false );
+        }
+
+        function trackEvent( e ) {
+            var _this = $( this ),
+                category = 'News View',
+                action = _this.data( 'event' ),
+                label = _this.parent().parent().find( '.news-headline' ).text();
+
+            if ( ! label || label === '' ) {
+                label = _this.parent().parent().parent().find( '.news-headline' ).text();
+            }
+
+            e.preventDefault();
+
+            _gaq.push( ['_trackEvent', category, action, label] );
+
+            setTimeout(function() {
+                window.location = _this.attr( 'href' );
+            }, 10 );
+        }
+    };
+
     SI.init = function() {
         SI.checkRspImgs();
         SI.checkWebP();
         SI.checkDPI();
         SI.initNav();
+        SI.initTracking();
 
         // scroll top for iPhone/Android phoes
         if ( window.matchMedia && window.matchMedia( '(max-width: 768px)' ).matches ) {

@@ -34,19 +34,21 @@
             s = me.settings;
             els = me.elements;
 
-            var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-                                        window.webkitRequestAnimationFrame || window.msRequestAnimationFrame ||
-                                        function( callback ) {
-                                            window.setTimeout( callback, 1000 / 60 );
-                                        };
+            if ( ! SI.isEntry ) {
+                var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+                                            window.webkitRequestAnimationFrame || window.msRequestAnimationFrame ||
+                                            function( callback ) {
+                                                window.setTimeout( callback, 1000 / 60 );
+                                            };
 
-            window.requestAnimationFrame = requestAnimationFrame;
+                window.requestAnimationFrame = requestAnimationFrame;
 
-            me.bindEvents();
+                me.bindEvents();
 
-            // if the document body is <= the window height, try to load more entries
-            if ( $( doc.body ).height() <= s.wh ) {
-                me.requestTick();
+                // if the document body is <= the window height, try to load more entries
+                if ( $( doc.body ).height() <= s.wh ) {
+                    me.requestTick();
+                }
             }
         },
 
