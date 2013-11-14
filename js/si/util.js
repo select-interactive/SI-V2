@@ -10,6 +10,13 @@
 (function( document, $ ) {
     window.SI = window.SI || {};
 
+    // requestAnimation
+    window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+                                   window.webkitRequestAnimationFrame || window.msRequestAnimationFrame ||
+                                   function( callback ) {
+                                       window.setTimeout( callback, 1000 / 60 );
+                                   };
+
     // Fix for iPhone viewport scale bug
     // http://www.blog.highub.com/mobile-2/a-fix-for-iphone-viewport-scale-bug/
     SI.viewportmeta = document.querySelector && document.querySelector( 'meta[name="viewport"]' );
@@ -160,17 +167,26 @@
             i = 0,
             len = imgs.length,
             webp = Modernizr.webp,
+            ticking = false,
             img, dir, imgName;
 
-        if ( ! window.matchMedia || window.matchMedia( '(min-width:1292px)' ).matches ) {
-            dir = 'large';
+        function getDir() {
+            var directory;
+
+            if ( ! window.matchMedia || window.matchMedia( '(min-width:1292px)' ).matches ) {
+                directory = 'large';
+            }
+            else if ( window.matchMedia && ( window.matchMedia( '(min-width:769px) and (max-width:1291px)' ).matches ) || ( window.matchMedia( '(min-width:768px) and (orientation:landscape)' ).matches ) ) {
+                directory = 'med';
+            }
+            else {
+                directory = 'small';
+            }
+
+            return directory;
         }
-        else if ( window.matchMedia && ( window.matchMedia( '(min-width:769px) and (max-width:1291px)' ).matches ) || ( window.matchMedia( '(min-width:768px) and (orientation:landscape)' ).matches ) ) {
-            dir = 'med';
-        }
-        else {
-            dir = 'small';
-        }
+
+        dir = getDir();
 
         for ( ; i < len; i++ ) {
             img = imgs[i];
@@ -183,6 +199,34 @@
 
             img.src = img.getAttribute( 'data-path' ) + dir + '/' + imgName;
         }
+
+        function windowResize() {
+            requestTick();
+        }
+
+        function requestTick() {
+            if ( ! ticking ) {
+                requestAnimationFrame( update );
+                ticking = true;
+            }
+        }
+
+        function update() {
+            var directory = getDir();
+            
+            if ( dir !== directory ) {
+                for ( i = 0 ; i < len; i++ ) {
+                    img = imgs[i];
+                    img.src = img.src.replace( '/' + dir + '/', '/' + directory + '/' );
+                }
+
+                dir = directory;
+            }
+
+            ticking = false;
+        }
+
+        window.addEventListener( 'resize', windowResize, false );
     };
 
     SI.checkWebP = function() {

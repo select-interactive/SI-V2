@@ -20,8 +20,8 @@ Copyright (C) Microsoft Corporation. All rights reserved.
     <SourceWebPhysicalPath>$(MSBuildThisFileDirectory)</SourceWebPhysicalPath>
     <SourceWebVirtualPath>/SI-V2</SourceWebVirtualPath>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <SourceWebProject>http://localhost:62803</SourceWebProject>
-    <SourceWebMetabasePath>/IISExpress/7.5/LM/W3SVC/40/ROOT</SourceWebMetabasePath>
+    <SourceWebProject>http://localhost:63658</SourceWebProject>
+    <SourceWebMetabasePath>/IISExpress/7.5/LM/W3SVC/67/ROOT</SourceWebMetabasePath>
   </PropertyGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
