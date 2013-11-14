@@ -9,6 +9,7 @@
     </script>--%>
     <script type="text/javascript">
         var _gaq = _gaq || [];
+        _gaq.push(['_setDomainName', 'none']);
         _gaq.push(['_setAccount', 'UA-28490429-1']);
         _gaq.push(['_trackPageview']);
 
