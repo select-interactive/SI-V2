@@ -62,7 +62,8 @@ CKEDITOR.editorConfig = function( config ) {
        { name: 'Column Half Width', element: 'div', attributes: { 'class': 'span-6' } },
        { name: 'Column Omega', element: 'div', attributes: { 'class': 'omega' } },
        { name: 'Link No Border', element: 'a', attributes: { 'class': 'no-border' } },
-       { name: 'Keep P Margin', element: 'p', attributes: { 'class': 'margin-keep' }}
+       { name: 'Keep P Margin', element: 'p', attributes: { 'class': 'margin-keep' }},
+       { name: 'Code Block', element: 'p', attributes: { 'class': 'code' }}
     ];
 };
 

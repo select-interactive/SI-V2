@@ -46,6 +46,15 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'soucrce-code-pro-reg';
+    src: url('/font/SourceCodePro-Regular.eot');
+    src: url('/font/SourceCodePro-Regular.eot?#iefix') format('embedded-opentype'),
+         url('/font/SourceCodePro-Regular.woff') format('woff'),
+         url('/font/SourceCodePro-Regular.svg#sourcecodeproreg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 .telegrafico,
 .av-35,
