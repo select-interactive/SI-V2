@@ -10,7 +10,7 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContent" Runat="Server">
-    <h1 class="text-center mb-gutter-2"><img src="/img/logos/select-interactive-500w.v1.webp" class="webp png dpi" alt="Select Interactive Website Development" width="500" height="151" /></h1>
+    <h1 class="text-center mb-gutter-2"><img src="//static.select-interactive.com/img/logos/select-interactive-500w.v1.webp" class="webp png dpi" alt="Select Interactive Website Development" width="500" height="151" /></h1>
     <div class="row divider cols-3-2">
         <div class="col">
             <h2 class="headline">Fast, Creative, User-Friendly Websites</h2>
