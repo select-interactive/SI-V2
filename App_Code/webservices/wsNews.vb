@@ -137,7 +137,7 @@ Public Class wsNews
 
     End Function
 
-    <WebMethod()> _
+    <WebMethod(EnableSession:=True)> _
     Public Function loadNewsItemsAsHtml(ByVal newsId As Integer,
                                         ByVal search As String,
                                         ByVal webUrl As String,
@@ -181,10 +181,15 @@ Public Class wsNews
                     img = "si.v1.png"
                 End If
 
-                Dim imgType As String = IIf(IsDBNull(row.Item("thumbPicType")), "", "class=""webp " & row.Item("thumbPicType") & """")
+                'Dim imgType As String = IIf(IsDBNull(row.Item("thumbPicType")), "", "class=""webp " & row.Item("thumbPicType") & """")
+                Dim imgType As String = IIf(IsDBNull(row.Item("thumbPicType")), "", row.Item("thumbPicType"))
+
+                If Not Session("webP") Is Nothing AndAlso Session("webP") = False AndAlso img.ToLower.IndexOf(".webp") > 0 Then
+                    img = img.Replace(".webp", "." & imgType)
+                End If
 
                 item = item.Replace("{{thumbPic}}", img)
-                item = item.Replace("{{imgType}}", imgType)
+                'item = item.Replace("{{imgType}}", imgType)
                 item = item.Replace("{{shortTitle}}", row.Item("shortTitle"))
                 item = item.Replace("{{summary}}", row.Item("summary"))
                 item = item.Replace("{{webUrl}}", row.Item("webUrl"))
@@ -200,7 +205,7 @@ Public Class wsNews
                 End If
             Next
         Catch ex As Exception
-
+            Return ex.ToString()
         End Try
 
         Return html.ToString

@@ -109,8 +109,13 @@ Public Class wsPortfolio
                     blogUrl = "<a href=""/news/" & blogUrl & """>Project Details</a>&nbsp;&nbsp;//&nbsp;&nbsp;"
                 End If
 
+                Dim img As String = row.Item("primaryPic")
+                If Not Session("webP") Is Nothing AndAlso Session("webP") = False AndAlso img.ToLower.IndexOf(".webp") > 0 Then
+                    img = img.Replace(".webp", ".jpg")
+                End If
+
                 item = item.Replace("{{name}}", row.Item("name"))
-                item = item.Replace("{{primaryPic}}", row.Item("primaryPic"))
+                item = item.Replace("{{primaryPic}}", img)
                 item = item.Replace("{{theLink}}", theLink)
                 item = item.Replace("{{url}}", "View Site")
                 item = item.Replace("{{summary}}", row.Item("summary"))
