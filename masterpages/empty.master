@@ -13,7 +13,7 @@
 <head>
     <meta charset="utf-8">
     <asp:ContentPlaceHolder runat="server" ID="cphMeta" />
-    <uc:head runat="server" ID="ucHead" />    
+    <uc:head runat="server" ID="ucHead" />
     <asp:ContentPlaceHolder runat="server" ID="cphHead" />
 </head>
 <body>
