@@ -22,19 +22,15 @@ Public Class SI_Images : Implements IHttpHandler, IReadOnlySessionState
         
         Dim ctx As HttpContext = HttpContext.Current
         
-        If IsNothing(ctx.Session("webP")) Then
-            ctx.Session("webP") = False
+        Dim webP As Boolean = false
             
-            Dim accept As String = ctx.Request.Headers.Item("Accept")
+        Dim accept As String = ctx.Request.Headers.Item("Accept")
         
-            If accept.ToLower.IndexOf("image/webp") > 0 Then
-                ctx.Session("webP") = True
-            Else
-                ctx.Session("webP") = False
-            End If
+        If accept.ToLower.Contains("image/webp") Then
+            webP = True
         End If
-        
-        If Not ctx.Session("webP") Is Nothing AndAlso ctx.Session("webP") = False And Not fallbackType Is Nothing AndAlso fallbackType.Length > 0 AndAlso theFile.IndexOf(".webp") > 0 Then
+                
+        If webP = False Andalso theFile.IndexOf(".webp") > 0 Then
             theFile = theFile.Replace(".webp", "." & fallbackType)
             
             If fallbackType = "jpg" Then

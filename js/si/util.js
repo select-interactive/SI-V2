@@ -268,7 +268,7 @@
                 if ( src.indexOf( '/SI_Images.ashx?' ) > 0 ) {
                     src = src.substring( src.indexOf( '?' ) );
                     temp = src.substring( 0 , src.indexOf( '.' ) );
-                    src = '/SI_Images.ashx' + temp + '-@2.' + src.substring( src.indexOf( '.' ) + 1 );
+                    src = '//static.select-interactive.com/SI_Images.ashx' + temp + '-@2.' + src.substring( src.indexOf( '.' ) + 1 );
                 }
                 else {
                     src = src.substring( src.indexOf( '/img' ) );

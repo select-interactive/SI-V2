@@ -21,14 +21,7 @@
     End Sub
 
     Sub Session_Start(ByVal sender As Object, ByVal e As EventArgs)
-        ' Code that runs when a new session is started
-        Dim accept As String = Request.Headers.Item("Accept")
-        
-        If accept.ToLower.IndexOf("image/webp") > 0 Then
-            Session("webP") = True
-        Else
-            Session("webP") = False
-        End If
+
     End Sub
 
     Sub Session_End(ByVal sender As Object, ByVal e As EventArgs)
