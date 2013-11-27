@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="VB" MasterPageFile="~/masterpages/empty.master" AutoEventWireup="false" CodeFile="Default.aspx.vb" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphMeta" Runat="Server">
-    <title>Select Interactive - Fort Worth Website Design, Website Development, Web Application Development</title>
+    <title>Select Interactive - Fort Worth Website Design and Development, Web Application Development</title>
     <meta name="description" content="Developers of innovative websites and web applications located in Fort Worth, Texas.">
 </asp:Content>
 
