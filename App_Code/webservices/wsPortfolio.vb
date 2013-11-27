@@ -60,7 +60,7 @@ Public Class wsPortfolio
         Return New DataSetToListClass(ds.Portfolio).ReturnDS
     End Function
 
-    <WebMethod()> _
+    <WebMethod(EnableSession:=True)> _
     Public Function loadPortfolioItemsAsHtml(ByVal projectId As Integer,
                                              ByVal isActive As Boolean,
                                              ByVal displayMode As Integer) As String
@@ -110,9 +110,11 @@ Public Class wsPortfolio
                 End If
 
                 Dim img As String = row.Item("primaryPic")
-                If Not Session("webP") Is Nothing AndAlso Session("webP") = False AndAlso img.ToLower.IndexOf(".webp") > 0 Then
-                    img = img.Replace(".webp", ".jpg")
-                End If
+                img &= "&fallback=jpg"
+
+                'If Not Session("webP") Is Nothing AndAlso Session("webP") = False AndAlso img.ToLower.IndexOf(".webp") > 0 Then
+                '    img = img.Replace(".webp", ".jpg")
+                'End If
 
                 item = item.Replace("{{name}}", row.Item("name"))
                 item = item.Replace("{{primaryPic}}", img)

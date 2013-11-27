@@ -260,15 +260,24 @@
             for ( ; i < len; i++ ) {
                 var img = imgs[i],
                     src = img.src,
+                    temp = '',
                     ext;
                 
                 // trim off anything before /img
                 // capture the extension
-                src = src.substring( src.indexOf( '/img' ) );
-                ext = src.substring( src.indexOf( '.' ) );
-                
-                // put -@2 before the extension and set to the img src
-                src = src.substring( 0 , src.indexOf( '.' ) ) + '-@2' + ext;
+                if ( src.indexOf( '/SI_Images.ashx?' ) > 0 ) {
+                    src = src.substring( src.indexOf( '?' ) );
+                    temp = src.substring( 0 , src.indexOf( '.' ) );
+                    src = '/SI_Images.ashx' + temp + '-@2.' + src.substring( src.indexOf( '.' ) + 1 );
+                }
+                else {
+                    src = src.substring( src.indexOf( '/img' ) );
+                    ext = src.substring( src.indexOf( '.' ) );
+
+                    // put -@2 before the extension and set to the img src
+                    src = src.substring( 0 , src.indexOf( '.' ) ) + '-@2' + ext;
+                }
+               
                 img.src = src;
             }
         }

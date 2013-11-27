@@ -57,13 +57,13 @@
         <div class="col col-small">
             <div class="card card-copy card-copy-base mb-gutter-2">
                 <h3 class="headline text-center">Search Engine Optimization (SEO)</h3>
-                <div class="card-img"><img src="/img/services/analytics.v1.<%= IIf(Session("webP") = True, "webp", "jpg")%>" alt="Select Interactive Search Engine Optimization" width="719" height="296" /></div>
+                <div class="card-img"><img src="/SI_Images.ashx?file=services/analytics.v1.webp&fallback=jpg" alt="Select Interactive Search Engine Optimization" width="719" height="296" /></div>
                 <p>In order to get your brand and product more attention, it&rsquo;s important that people can find you when they search the web -- especially people that have never heard of you. That&rsquo;s why with every website we include SEO best practices to help prospective clients discover your business online.</p>
                 <p>By using both Google Analytics and Google Webmaster Tools for your website, we can monitor search traffic and content keywords. We can analyze that data, provide recommendations, and make changes to site copy, meta tags, anchor links, and page headings in order to improve your search engine results.</p>
             </div>
             <div class="card card-copy card-copy-base">
                 <h3 class="headline text-center">Content Management Systems (CMS)</h3>
-                <div class="card-img"><img src="/img/services/cms.v1.<%= IIf(Session("webP") = True, "webp", "jpg")%>" alt="Content Management Systems" width="719" height="268" /></div>
+                <div class="card-img"><img src="/SI_Images.ashx?file=services/cms.v1.webp?fallback=jpg" alt="Content Management Systems" width="719" height="268" /></div>
                 <p>Does your site need to be kept up-to-date at a moment&rsquo;s notice? We can provide you with a custom Content Management System (CMS) designed uniquely for you. No need to email content updates or call for changes. Our goal is to provide you the tools to be successful, with or without our input.</p>
                 <p>We build unique administrative dashboards that give you the behind the scenes control needed to keep your site up-to-date – no code to decipher, hard to find features, or frustration here. The ability to manage your site in real time becomes as easy and intuitive as checking your email. Goodbye learning curve and hello rewarding satisfaction, the control is at your own fingertips.</p>
             </div>

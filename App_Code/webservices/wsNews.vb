@@ -184,8 +184,12 @@ Public Class wsNews
                 'Dim imgType As String = IIf(IsDBNull(row.Item("thumbPicType")), "", "class=""webp " & row.Item("thumbPicType") & """")
                 Dim imgType As String = IIf(IsDBNull(row.Item("thumbPicType")), "", row.Item("thumbPicType"))
 
-                If Not Session("webP") Is Nothing AndAlso Session("webP") = False AndAlso img.ToLower.IndexOf(".webp") > 0 Then
-                    img = img.Replace(".webp", "." & imgType)
+                'If Not Session("webP") Is Nothing AndAlso Session("webP") = False AndAlso img.ToLower.IndexOf(".webp") > 0 Then
+                '    img = img.Replace(".webp", "." & imgType)
+                'End If
+
+                If img.ToLower.IndexOf(".webp") > 0 Then
+                    img &= "&fallback=" & imgType
                 End If
 
                 item = item.Replace("{{thumbPic}}", img)
