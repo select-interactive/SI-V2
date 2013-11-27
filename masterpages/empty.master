@@ -33,7 +33,6 @@
             <uc:mblFooter runat="server" ID="mblFooter" />
         </div>
     </div>
-
     <uc:includedScripts runat="server" ID="ucIncludedScripts" />
     <asp:ContentPlaceHolder runat="server" ID="cphJS" />
     <uc:googleAnalytics runat="server" ID="ucGoogleAnalytics" />
