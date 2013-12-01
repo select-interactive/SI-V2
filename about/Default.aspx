@@ -15,7 +15,7 @@
         <p>At <strong class="si-orange">Select Interactive</strong> we create websites, develop web and mobile applications, and build custom content management systems for businesses, large or small.</p>
         <p>We love a good challenge and build our business on being industry experts on up-and-coming web trends, platforms, and applications. If you can imagine it, there&rsquo;s a good chance we can build it. Let us bring digital voice to your brand.</p>
         <p>We look forward to working with you.</p>
-        <h3 class="subtitle subtitle-large">We are digital innovators — it&rsquo;s what we do, and we do it well.</h3>
+        <h3 class="subtitle subtitle-large">We are digital innovators &mdash; it&rsquo;s what we do, and we do it well.</h3>
     </div>
     <div class="row cols-2 divider">
         <div class="col">

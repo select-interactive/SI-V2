@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/masterpages/dynamicHead.master" AutoEventWireup="false" CodeFile="Default.aspx.vb" Inherits="portfolio_Default" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/masterpages/empty.master" AutoEventWireup="false" CodeFile="Default.aspx.vb" Inherits="portfolio_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphMeta" Runat="Server">
     <title>Website Design and Development Projects from Select Interactive</title>
