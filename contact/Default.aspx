@@ -77,5 +77,5 @@
 </asp:Content>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="cphJS" Runat="Server">
-    <script defer src="/js/si/build/contact.v-1.0.min.js"></script>
+    <script defer src="//static2.select-interactive.com/js/si/build/contact.v-1.0.min.js"></script>
 </asp:Content>

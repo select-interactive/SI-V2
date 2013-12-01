@@ -29,5 +29,5 @@
 </asp:Content>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="cphJS" Runat="Server">
-    <script defer src="/js/si/login.v-1.0.js"></script>
+    <script defer src="//static2.select-interactive.com/js/si/build/login.v-1.0.min.js"></script>
 </asp:Content>

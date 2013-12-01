@@ -12,5 +12,5 @@
 
 <asp:Content ID="Content4" ContentPlaceHolderID="cphJS" Runat="Server">
     <asp:Literal runat="server" ID="ltrlJS" />
-    <script defer src="/js/si/build/news.v-1.1.min.js"></script>
+    <script defer src="//static2.select-interactive.com/js/si/build/news.v-1.1.min.js"></script>
 </asp:Content>
