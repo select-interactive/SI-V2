@@ -109,12 +109,8 @@ Public Class wsPortfolio
                     blogUrl = "<a href=""/news/" & blogUrl & """>Project Details</a>&nbsp;&nbsp;//&nbsp;&nbsp;"
                 End If
 
-                Dim img As String = row.Item("primaryPic")
-                img &= "&fallback=jpg"
-
-                'If Not Session("webP") Is Nothing AndAlso Session("webP") = False AndAlso img.ToLower.IndexOf(".webp") > 0 Then
-                '    img = img.Replace(".webp", ".jpg")
-                'End If
+                Dim img As String = row.Item("primaryPic")            
+                img = util.getImg("portfolio/primary/" & img, "jpg")
 
                 item = item.Replace("{{name}}", row.Item("name"))
                 item = item.Replace("{{primaryPic}}", img)

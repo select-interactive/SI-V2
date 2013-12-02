@@ -20,7 +20,7 @@
     <div class="row cols-2 divider">
         <div class="col">
             <h3 class="headline">Jeremy Burton</h3>
-            <img src="//static.select-interactive.com/SI_Images.ashx?file=about/headshots/jeremy-burton.v1.jpg" class="headshot" alt="Jeremy Burton" width="125" height="125" />
+            <img src="<%= (New SI_UTIL).getImg("about/headshots/jeremy-burton.v1.jpg", "")%>" class="headshot" alt="Jeremy Burton" width="125" height="125" />
             <h3 class="subtitle">Partner, Lead Developer</h3>
             <p class="text-small"><i class="fa fa-left fa-phone"></i><a href="tel:817.210.4303">817.210.4303</a><br /><i class="fa fa-left fa-envelope"></i><a href="mailto:jeremy@select-interactive.com">jeremy@select-interactive.com</a></p>
             <p>Jeremy Burton is Co-Partner of Select Interactive, overseeing implementation and development for all client accounts. Jeremy is also responsible for all development and technology strategy.</p>
@@ -41,11 +41,11 @@
     </div>
     <h3 class="headline headline-large">Who We Work With</h3>
     <div id="partners-grid">
-        <a href="http://www.lkcm.com" target="_blank"><img src="//static.select-interactive.com/SI_Images.ashx?file=partners/lkcm.v1.webp&fallback=png" class="dpi" alt="Luther King Capital Management" width="122" height="40" /></a>
-        <a href="http://www.slantpartners.com" target="_blank"><img src="//static.select-interactive.com/SI_Images.ashx?file=partners/slant.v1.webp&fallback=png" class="dpi" alt="Slant Partners, Design-Driven Marketing Firm" width="150" height="40" /></a>
-        <a href="http://www.bluerockmarketing.net" target="_blank"><img src="//static.select-interactive.com/SI_Images.ashx?file=partners/blue-rock.v1.webp&fallback=png" class="dpi" alt="BlueRock Marketing" width="350" height="39" /></a>
-        <a href="http://www.streamrealty.com" target="_blank"><img src="//static.select-interactive.com/SI_Images.ashx?file=partners/srp.v1.png" class="dpi" alt="Stream Realty Partners Commercial Real Estate Services" width="89" height="40" /></a>
-        <a href="http://www.edelweissediting.com" target="_blank"><img src="//static.select-interactive.com/SI_Images.ashx?file=partners/edelweiss.v1.png" class="dbi" alt="Edelweiss Editing" width="208" height="40" /></a>
+        <a href="http://www.lkcm.com" target="_blank"><img src="<%= (New SI_UTIL).getImg("partners/lkcm.v1.webp", "png")%>" class="dpi" alt="Luther King Capital Management" width="122" height="40" /></a>
+        <a href="http://www.slantpartners.com" target="_blank"><img src="<%= (New SI_UTIL).getImg("partners/slant.v1.webp", "png")%>" class="dpi" alt="Slant Partners, Design-Driven Marketing Firm" width="150" height="40" /></a>
+        <a href="http://www.bluerockmarketing.net" target="_blank"><img src="<%= (New SI_UTIL).getImg("partners/blue-rock.v1.webp", "png")%>" class="dpi" alt="BlueRock Marketing" width="350" height="39" /></a>
+        <a href="http://www.streamrealty.com" target="_blank"><img src="<%= (New SI_UTIL).getImg("partners/srp.v1.png", "")%>" class="dpi" alt="Stream Realty Partners Commercial Real Estate Services" width="89" height="40" /></a>
+        <a href="http://www.edelweissediting.com" target="_blank"><img src="<%= (New SI_UTIL).getImg("partners/edelweiss.v1.png", "")%>" class="dbi" alt="Edelweiss Editing" width="208" height="40" /></a>
     </div>
 </asp:Content>
 
