@@ -65,7 +65,7 @@
                 <h3 class="headline text-center">Content Management Systems (CMS)</h3>
                 <div class="card-img"><img src="<%= (New SI_UTIL).getImg("services/cms.v1.webp", "jpg")%>" alt="Content Management Systems" width="719" height="268" /></div>
                 <p>Does your site need to be kept up-to-date at a moment&rsquo;s notice? We can provide you with a custom Content Management System (CMS) designed uniquely for you. No need to email content updates or call for changes. Our goal is to provide you the tools to be successful, with or without our input.</p>
-                <p>We build unique administrative dashboards that give you the behind the scenes control needed to keep your site up-to-date – no code to decipher, hard to find features, or frustration here. The ability to manage your site in real time becomes as easy and intuitive as checking your email. Goodbye learning curve and hello rewarding satisfaction, the control is at your own fingertips.</p>
+                <p>We build unique administrative dashboards that give you the behind the scenes control needed to keep your site up-to-date &mdash; no code to decipher, hard to find features, or frustration here. The ability to manage your site in real time becomes as easy and intuitive as checking your email. Goodbye learning curve and hello rewarding satisfaction, the control is at your own fingertips.</p>
             </div>
         </div>
     </div>
