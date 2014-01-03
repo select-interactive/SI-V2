@@ -165,6 +165,24 @@ Public Class wsNews
         Return html
     End Function
 
+    <WebMethod()> _
+    Public Function loadNewsItemsAsHtmlByMonth(ByVal month As Integer,
+                                               ByVal year As Integer,
+                                               ByVal start As Integer,
+                                               ByVal max As Integer) As String
+        Dim html As String = ""
+
+        Dim ta As New dsNewsTableAdapters.NewsTableAdapter
+        Dim ds As New dsNews
+        ta.FillByMonth(ds.News, month, year, 0, 999)
+
+        If ds.News.Rows.Count > 0 Then
+            html = getNewsItemSummary(ds.News)
+        End If
+
+        Return html
+    End Function
+
     Private Function getNewsItemSummary(ByVal items As dsNews.NewsDataTable) As String
         Dim html As New StringBuilder
 

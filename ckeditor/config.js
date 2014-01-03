@@ -53,6 +53,7 @@ CKEDITOR.editorConfig = function( config ) {
 
     config.stylesSet = [
        { name: 'Subheading', element: 'h3', attributes: { 'class': 'subtitle' } },
+       { name: 'Content Heading', element: 'h3', attributes: { 'class': 'content-heading' } },
        { name: 'Blockquote', element: 'p', attributes: { 'class': 'quote' } },
        { name: 'note', element: 'p', attributes: { 'class': 'note' } },
        { name: 'Image Wrapper', element: 'div', attributes: { 'class': 'news-body-img' } },
@@ -63,7 +64,8 @@ CKEDITOR.editorConfig = function( config ) {
        { name: 'Column Omega', element: 'div', attributes: { 'class': 'omega' } },
        { name: 'Link No Border', element: 'a', attributes: { 'class': 'no-border' } },
        { name: 'Keep P Margin', element: 'p', attributes: { 'class': 'margin-keep' }},
-       { name: 'Code Block', element: 'p', attributes: { 'class': 'code' }}
+       { name: 'Code Block', element: 'p', attributes: { 'class': 'code' }},
+       { name: 'Code Block Comment', element: 'span', attributes: { 'class': 'code-comment' }}
     ];
 };
 

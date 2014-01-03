@@ -9,13 +9,21 @@ Partial Class news_Default
     Private Sub Load_Entries()
         Dim webUrl As String = Page.Request.QueryString("webUrl")
         Dim tagUrl As String = Page.Request.QueryString("tagUrl")
+        Dim year As String = Page.Request.QueryString("year")
+        Dim month As String = Page.Request.QueryString("month")
 
         Dim html As String = ""
         Dim title As String = ""
         Dim meta As String = ""
         Dim ws As New wsNews
 
+        If year = "tag" Then
+            year = Nothing
+            tagUrl = month
+        End If
+
         If Not webUrl Is Nothing AndAlso webUrl.Length > 0 Then
+
             html = ws.loadNewsItemsAsHtml(-1, Nothing, webUrl, Nothing, False, 1, 1, 2)
 
             title = html.Substring(html.IndexOf("<h2 class=""news-headline news-headline-large"">") + 46)
@@ -25,7 +33,25 @@ Partial Class news_Default
             meta = meta.Substring(0, meta.IndexOf("</div>"))
 
             ltrlJS.Text = "<script>window.SI=window.SI || {};SI.isEntry=true;</script>"
+
+        ElseIf Not year Is Nothing AndAlso year.Length > 0 AndAlso Not year = "tag" Then
+
+            If month Is Nothing Then
+                month = -1
+                html = "<h2 class=""headline headline-large"">Entries from " & year & "</h2>"
+                title = "News from Select Interactive from " & year
+                meta = "Web development projects, news, and updates from Select Interactive from " & year & "."
+            Else
+                html = "<h2 class=""headline headline-large"">Entries from " & MonthName(month, False) & " " & year & "</h2>"
+                title = "News from Select Interactive from " & MonthName(month, False) & " " & year
+                meta = "Web development projects, news, and updates from Select Interactive from " & MonthName(month, False) & " " & year & "."
+            End If
+
+            html &= ws.loadNewsItemsAsHtmlByMonth(CInt(month), CInt(year), 0, 999)
+
+            ltrlJS.Text = "<script>window.SI=window.SI || {};SI.stopOnScrollLoad=true;</script>"
         ElseIf Not tagUrl Is Nothing AndAlso tagUrl.Length > 0 Then
+
             Dim theTitle() As String = tagUrl.Split("-")
 
             For i As Integer = 0 To theTitle.Length - 1

@@ -148,6 +148,14 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 0 0 2px;
 }
 
+.content-heading {
+	@extend .av-medium;
+	@extend .si-orange;
+
+	font-size: em(18px);
+	margin: 0 0 2px;
+}
+
 
 // Body Text
 p {

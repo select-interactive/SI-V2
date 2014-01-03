@@ -36,16 +36,18 @@
 
             if ( ! SI.isEntry ) {
                 me.bindEvents();
-
+                
                 // if the document body is <= the window height, try to load more entries
-                if ( $( doc.body ).height() <= s.wh ) {
+                if ( $( doc.body ).height() <= s.wh && els.entries.length === 8 && ! SI.stopOnScrollLoad ) {
                     me.requestTick();
                 }
             }
         },
 
         bindEvents: function() {
-            window.addEventListener( 'scroll', me.onScroll, false );
+            if ( ! SI.stopOnScrollLoad ) {
+                window.addEventListener( 'scroll', me.onScroll, false );
+            }
         },
 
         onScroll: function() {

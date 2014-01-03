@@ -21,6 +21,10 @@ Public Class CustomRouteHandler : Implements IRouteHandler
 
         If Not webUrl Is Nothing AndAlso webUrl.Length > 0 AndAlso Not year Is Nothing AndAlso year.Length > 0 AndAlso Not month Is Nothing AndAlso month.Length > 0 Then
             qs = "?webUrl=" & year & "/" & month & "/" & webUrl
+        ElseIf Not year Is Nothing AndAlso year.Length > 0 AndAlso Not month Is Nothing AndAlso month.Length > 0 Then
+            qs = "?year=" & year & "&month=" & month
+        ElseIf Not year Is Nothing AndAlso year.Length > 0 Then
+            qs = "?year=" & year
         ElseIf Not tag Is Nothing AndAlso tag.Length > 0 Then
             qs = "?tagUrl=" & tag
         End If
