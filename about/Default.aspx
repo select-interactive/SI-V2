@@ -41,7 +41,7 @@
     </div>
     <h3 class="headline headline-large">Who We Work With</h3>
     <div id="partners-grid">
-        <a href="http://www.lkcm.com" target="_blank"><img src="<%= (New SI_UTIL).getImg("partners/lkcm.v1.webp", "png")%>" class="dpi" alt="Luther King Capital Management" width="122" height="40" /></a>
+        <a href="http://www.williamstrew.com.com" target="_blank"><img src="<%= (New SI_UTIL).getImg("partners/wt.v1.webp", "png")%>" class="dpi" alt="Williams Trew Sotheby's Interational Realty" width="250" height="39" /></a>
         <a href="http://www.slantpartners.com" target="_blank"><img src="<%= (New SI_UTIL).getImg("partners/slant.v1.webp", "png")%>" class="dpi" alt="Slant Partners, Design-Driven Marketing Firm" width="150" height="40" /></a>
         <a href="http://www.bluerockmarketing.net" target="_blank"><img src="<%= (New SI_UTIL).getImg("partners/blue-rock.v1.webp", "png")%>" class="dpi" alt="BlueRock Marketing" width="350" height="39" /></a>
         <a href="http://www.streamrealty.com" target="_blank"><img src="<%= (New SI_UTIL).getImg("partners/srp.v1.png", "")%>" class="dpi" alt="Stream Realty Partners Commercial Real Estate Services" width="89" height="40" /></a>
