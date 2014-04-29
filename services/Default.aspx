@@ -46,11 +46,12 @@
             <p>As a firm specialized in developing websites, we are often approached by PR/Marketing/Design agencies to implement their designs into full sites. We take pride in being extremely easy to work with and knowledgeable. We are happy and eager to share information about performance factors in design, responsive design strategies, SEO best practices, and assist in the analysis of Google Analytics and Google Webmaster Tools.</p>
             <p>A few examples of these collaborative projects include:</p>
             <ul class="no-style li-mrg-small">
+                <li><a href="http://www.regionsplaza.com" target="_blank">www.regionsplaza.com</a></li>
+                <li><a href="http://www.openra.com" target="_blank">www.openra.com</a></li>
                 <li><a href="http://www.bbvacompassplaza.com" target="_blank">www.bbvacompassplaza.com</a></li>
                 <li><a href="http://www.rosebriar.com" target="_blank">www.rosebriar.com</a></li>
                 <li><a href="http://www.trammellcrowcenter.com" target="_blank">www.trammellcrowcenter.com</a></li>
                 <li><a href="http://www.lenoxtowersbuckhead.com" target="_blank">www.lenoxtowersbuckhead.com</a></li>
-                <li><a href="http://www.openra.com" target="_blank">www.openra.com</a></li>
                 <li><a href="http://www.ahpropmgmt.com" target="_blank">www.ahpropmgmt.com</a></li>
             </ul>
         </div>
