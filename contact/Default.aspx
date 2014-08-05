@@ -71,6 +71,11 @@
                     <li><i class="fa fa-left fa-phone fa-smaller"></i><a href="tel:817.810.0021.">817.810.0021</a></li>
                     <li><i class="fa fa-left fa-envelope fa-smaller"></i><a href="mailto:dan@select-interactive.com">dan@select-interactive.com</a></li>
                 </ul>
+                <h4 class="subtitle">Smitha Kumar</h4>
+                <ul class="no-style li-mrg-small">
+                    <li><i class="fa fa-left fa-phone fa-smaller"></i><a href="tel:817.210.4307.">817.210.4307</a></li>
+                    <li><i class="fa fa-left fa-envelope fa-smaller"></i><a href="mailto:smitha@select-interactive.com">smitha@select-interactive.com</a></li>
+                </ul>
             </div>
         </div>
     </div>

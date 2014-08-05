@@ -47,8 +47,11 @@
             <p>A few examples of these collaborative projects include:</p>
             <ul class="no-style li-mrg-small">
                 <li><a href="http://www.regionsplaza.com" target="_blank">www.regionsplaza.com</a></li>
+                <li><a href="http://www.fairwindstower.com" target="_blank">www.fairwindstower.com</a></li>
                 <li><a href="http://www.openra.com" target="_blank">www.openra.com</a></li>
                 <li><a href="http://www.bbvacompassplaza.com" target="_blank">www.bbvacompassplaza.com</a></li>
+                <li><a href="http://www.contactpointelakemary.com" target="_blank">www.contactpointelakemary.com</a></li>
+                <li><a href="http://www.liveoaksquare.com" target="_blank">www.liveoaksquare.com</a></li>
                 <li><a href="http://www.rosebriar.com" target="_blank">www.rosebriar.com</a></li>
                 <li><a href="http://www.trammellcrowcenter.com" target="_blank">www.trammellcrowcenter.com</a></li>
                 <li><a href="http://www.lenoxtowersbuckhead.com" target="_blank">www.lenoxtowersbuckhead.com</a></li>

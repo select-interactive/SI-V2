@@ -37,7 +37,13 @@
             <p class="text-small"><i class="fa fa-left fa-phone"></i><a href="tel:817.810.0021">817.810.0021</a><br /><i class="fa fa-left fa-envelope"></i><a href="mailto:dan@select-interactive.com">dan@select-interactive.com</a></p>
             <p>Bringing over 30 years of programming experience to the team, Dan provides creative, proven ideas to solve challenging project needs. Dan has developed software solutions for a wide range of industries, including real estate, horticulture, advertising, and merchandising.</p>
             <p>With a very strong database background, Dan has proven to consistently offer innovative, successful solutions to database infrastructures and architecture.</p>
-            <p>In 1995 Dan Harris founded SohoPros, Inc. as a computer technical support firm. Over the years SohoPros grew to offer a variety of services to their small business clients. Internet Access, Custom Programming, Web/Email Hosting and Web Site Development became the primary services provided. To meet the evolving demands of their clients, SohoPros began to focus more on custom web site development.</p>
+            <p>In 1995 Dan Harris founded SohoPros, Inc. as a computer technical support firm. Over the years SohoPros grew to offer a variety of services to their small business clients. Internet Access, Custom Programming, Web/Email Hosting and Web Site Development became the primary services provided. To meet the evolving demands of their clients, SohoPros began to focus more on custom web site development.</p><br />
+            <h3 class="headline">Smitha Kumar</h3>
+            <h3 class="subtitle">Front-End Engineer</h3>
+            <p class="text-small"><i class="fa fa-left fa-phone"></i><a href="tel:817.210.4307">817.210.4307</a><br /><i class="fa fa-left fa-envelope"></i><a href="mailto:smitha@select-interactive.com">smitha@select-interactive.com</a></p>
+            <p>Smitha Kumar joined the Select Interactive team in July 2014 as a front-end engineer. Her role will focus on HTML, CSS, and JavaScript development while integrating performance best practices, responsive web design strategies, and optimizations for user engagement.</p>
+            <p>In May 2014 Smitha graduated with a master&rsquo;s degree in software engineering from SMU. Prior to joining Select Interactive, Smitha pursued her interest in web development as an intern in 2013 and as a web developer student assistant for the Cox School of Business at SMU. Excited to learn new things and perfect her web development skills, Smitha was a perfect fit to join the SI development team.</p>
+            <p>In her free time, she likes to listen to music, dance to the tunes, and read fiction books.</p>
         </div>
     </div>
     <h3 class="headline headline-large">Who We Work With</h3>
