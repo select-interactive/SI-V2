@@ -38,15 +38,19 @@
             <p>Bringing over 30 years of programming experience to the team, Dan provides creative, proven ideas to solve challenging project needs. Dan has developed software solutions for a wide range of industries, including real estate, horticulture, advertising, and merchandising.</p>
             <p>With a very strong database background, Dan has proven to consistently offer innovative, successful solutions to database infrastructures and architecture.</p>
             <p>In 1995 Dan Harris founded SohoPros, Inc. as a computer technical support firm. Over the years SohoPros grew to offer a variety of services to their small business clients. Internet Access, Custom Programming, Web/Email Hosting and Web Site Development became the primary services provided. To meet the evolving demands of their clients, SohoPros began to focus more on custom web site development.</p>
+			<h3 class="headline">Adam Nevarez</h3>
+			<h3 class="subtitle">Front-End Engineer</h3>
+			<p class="text-small"><i class="fa fa-left fa-phone"></i><a href="tel:817.210.4307">817.210.4307</a><br /><i class="fa fa-left fa-envelope"></i><a href="mailto:adam@select-interactive.com">adam@select-interactive.com</a></p>
+			<p>Adam joined Select Interactive in March 2015 and brings a strong software development background to the team. His primary focus will be on front-end development and assisting with ongoing project support and maintenance.</p>
         </div>
     </div>
     <h3 class="headline headline-large">Who We Work With</h3>
     <div id="partners-grid">
-        <a href="http://www.williamstrew.com" target="_blank"><img src="<%= (New SI_UTIL).getImg("partners/wt.v1.webp", "png")%>" class="dpi" alt="Williams Trew Sotheby's Interational Realty" width="250" height="39" /></a>
+        <a href="http://www.williamstrew.com" target="_blank"><img src="<%= (New SI_UTIL).getImg("partners/williams-trew.v1.png", "")%>" class="dpi" alt="Williams Trew Real Estate Services" width="293" height="40" /></a>
         <a href="http://www.slantpartners.com" target="_blank"><img src="<%= (New SI_UTIL).getImg("partners/slant.v1.webp", "png")%>" class="dpi" alt="Slant Partners, Design-Driven Marketing Firm" width="150" height="40" /></a>
-        <a href="http://www.bluerockmarketing.net" target="_blank"><img src="<%= (New SI_UTIL).getImg("partners/blue-rock.v1.webp", "png")%>" class="dpi" alt="BlueRock Marketing" width="350" height="39" /></a>
-        <a href="http://www.streamrealty.com" target="_blank"><img src="<%= (New SI_UTIL).getImg("partners/srp.v1.png", "")%>" class="dpi" alt="Stream Realty Partners Commercial Real Estate Services" width="89" height="40" /></a>
-        <a href="http://www.edelweissediting.com" target="_blank"><img src="<%= (New SI_UTIL).getImg("partners/edelweiss.v1.png", "")%>" class="dbi" alt="Edelweiss Editing" width="208" height="40" /></a>
+        <a href="http://www.nimbledesignco.com" target="_blank"><img src="<%= (New SI_UTIL).getImg("partners/nimble.v1.png", "")%>" class="dpi" alt="Nimble. A Design Consultancy" width="311" height="40" /></a>
+		<a href="http://www.ipdfw.org" target="_blank"><img src="<%= (New SI_UTIL).getImg("partners/ip.v1.png", "")%>" class="dpi" alt="Impossible Possibilities" width="399" height="40" /></a>
+		<a href="http://www.thebrandedcompany.com" target="_blank"><img src="<%= (New SI_UTIL).getImg("partners/branded.v1.png", "")%>" class="dpi" alt="Branded." width="236" height="40" /></a>
     </div>
 </asp:Content>
 
