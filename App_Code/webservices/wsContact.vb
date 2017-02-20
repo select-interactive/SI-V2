@@ -45,11 +45,11 @@ Public Class wsContact
 
             ' Setup the email SMTP client
             Dim smtp As New SmtpClient
-            Dim authenInfo As New Net.NetworkCredential("smtp@dfwmail.net", "outgoing")
+            Dim authenInfo As New Net.NetworkCredential("azure_50acdae6efeeb5f758ff025f581db3a7@azure.com", "danh5258")
             smtp.UseDefaultCredentials = False
             smtp.Credentials = authenInfo
             smtp.Port = "25"
-            smtp.Host = "mail.sohopros.com"
+        smtp.Host = "smtp.sendgrid.net"
 
             ' Setup the email object
             Dim mm As New MailMessage("""Select Interactive"" <contact@select-interactive.com>", "jeremy@select-interactive.com")
